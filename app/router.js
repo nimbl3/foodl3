@@ -32,6 +32,7 @@ module.exports.init = (app, config) => {
     const auth = firebase.auth();
     app.db = db;
     app.auth = auth;
+    app.user = auth.currentUser;
 
     let logType = 'dev';
     app.locals.ENV = env;
@@ -121,6 +122,11 @@ module.exports.init = (app, config) => {
         res.cookie('token', req.csrfToken(), {
             path: '/'
         });
+
+        if (app.user === null && req.url !== '/login') {
+            res.redirect('/login');
+            return;
+        }
         next();
     });
 

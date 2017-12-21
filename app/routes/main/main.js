@@ -2,12 +2,6 @@
 
 module.exports.default = (router) => {
     router.get('/', (req, res) => {
-        let user = req.app.auth.currentUser;
-        if (!user) {
-            res.redirect('/login');
-            return;
-        }
-
         const data = {
             title: 'Hello World',
             events: []
