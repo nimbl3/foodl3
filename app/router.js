@@ -13,15 +13,28 @@ const validator = require('express-validator');
 const expressVue = require('express-vue');
 const oauth2Api = require('./api');
 const path = require('path');
+const firebase = require('firebase');
+require('firebase/firestore');
 
 module.exports.init = (app, config) => {
     //Setup
     const env = process.env.NODE_ENV || 'development';
     const router = express.Router();
+
+    firebase.initializeApp({
+        apiKey: 'AIzaSyDCynSx-SxaSy7AQGIeJzrkg2c0zHR6-RM',
+        authDomain: 'foodl3-526fa.firebaseapp.com',
+        databaseURL: 'https://foodl3-526fa.firebaseio.com',
+        projectId: 'foodl3-526fa'
+    });
+    // Initialize Cloud Firestore through Firebase
+    const db = firebase.firestore();
+
     let logType = 'dev';
     app.locals.ENV = env;
     app.locals.ENV_DEVELOPMENT = (env === 'development');
     app.locals.rootPath = process.env.ROOT_PATH;
+    app.locals.db = db;
 
     //ExpressVue Setup
     //Latest non-production version of vue as of writing this doc, 
