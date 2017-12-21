@@ -1,6 +1,12 @@
 <template>
     <div>
-        <h1>Hello World</h1>
+        <h1>{{ title }}</h1>
+        <h2>Events</h2>
+        <ul>
+            <li v-for="event in events">
+                {{ event.name }}
+            </li>
+        </ul>
     </div>
 </template>
 
