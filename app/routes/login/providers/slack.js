@@ -1,6 +1,6 @@
+//
 const request = require('request');
-const querystring = require('querystring');
-const slackOAuthUrl = 'https://slack.com/api/oauth.access';
+const slackOAuthAccessUrl = 'https://slack.com/api/oauth.access';
 
 module.exports.default = (router) => {
     router.get('/slack_authenticate', (req, res) => {
@@ -10,7 +10,7 @@ module.exports.default = (router) => {
             code: req.query.code
         };
 
-        request([slackOAuthUrl, querystring.stringify(params)].join('?'), (error, response, body) => {
+        request({url: slackOAuthAccessUrl, qs: params}, (error, response, body) => {
             let responseBody = JSON.parse(body);
 
             if (error !== null || !responseBody.ok) {
