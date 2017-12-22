@@ -2,25 +2,20 @@
 
 module.exports.default = (router) => {
     router.get('/detail/:id', (req, res) => {
-        const data = {
-            id: req.params.id,
-            events: [],
+        let data = {
             csrfToken: req.csrfToken()
         };
-        const vueOptions = {
+        let vueOptions = {
             head: {
                 title: 'Express-Vue MVC Starter Kit'
             }
         };
-        console.log("-----------")
-        console.log(req.params.id)
-        console.log("-----------")
-        res.redirect('/');
-        // req.app.locals.db.collection('events').get().then(function(querySnapshot) {
-        //     querySnapshot.forEach(function(doc) {
-        //         data.events.push(doc.data());
-        //     });
-        //     res.renderVue('detail/detail', data, vueOptions);
-        // });
+
+        req.app.db.collection('events').doc(req.params.id).get().then(function(doc) {
+            data['detail'] = doc.data();
+            res.renderVue('detail/detail', data, vueOptions);
+        }).catch(function(error) {
+            console.log("Error getting document:", error);
+        });
     });
 };
