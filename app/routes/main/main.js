@@ -28,7 +28,7 @@ module.exports.default = (router) => {
 
     router.post('/', (req, res) => {
       console.log(req.body)
-      req.app.locals.db.collection('events').add(
+      req.app.db.collection('events').add(
         {
           name: req.body.name,
           description: req.body.description
