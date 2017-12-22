@@ -32,11 +32,11 @@ module.exports.default = (router) => {
     });
 
     router.post('/', (req, res) => {
-<<<<<<< HEAD
         let event = {
             name: req.body.name,
             description: req.body.description
         };
+    
         req.app.db.collection('events').add(event).then((eventDoc) => {
             req.app.db
                 .collection('teams').doc(req.session.team.domain)
@@ -52,16 +52,5 @@ module.exports.default = (router) => {
                     res.redirect('/');
                 });
         });
-=======
-      req.app.db.collection('events').add(
-        {
-          name: req.body.name,
-          description: req.body.description
-        }
-      )
-      .then(function(querySnapshot) {
-        res.redirect('/');
-      });
->>>>>>> Add and show comment order in detail page and show avatar
     });
 };
