@@ -22,8 +22,11 @@ module.exports.default = (router) => {
 
         req.app.db.collection('events').get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
-                data.events.push(doc.data());
+               let event = doc.data()
+               event['id'] = doc.id;
+               data.events.push(event);
             });
+            
             res.renderVue('main/main', data, vueOptions);
         });
     });

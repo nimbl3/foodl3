@@ -1,7 +1,9 @@
 <template>
     <ul>
         <li v-for="listName in list">
-          {{ listName.name }}
+          <a :href="`/detail/${listName.id}`">
+            {{ listName.name }}
+          </a>
         </li>
     </ul>
 </template>
