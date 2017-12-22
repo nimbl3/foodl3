@@ -122,11 +122,6 @@ module.exports.init = (app, config) => {
         res.cookie('token', req.csrfToken(), {
             path: '/'
         });
-
-        if (app.user === null && req.url !== '/login') {
-            res.redirect('/login');
-            return;
-        }
         next();
     });
 

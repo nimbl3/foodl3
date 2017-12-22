@@ -19,6 +19,9 @@ module.exports.default = (router) => {
                 return;
             }
 
+            req.session.token = responseBody.access_token;
+            req.session.user = responseBody.user;
+            req.session.team = responseBody.team;
             res.redirect('/');
         });
 
