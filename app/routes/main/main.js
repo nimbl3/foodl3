@@ -18,8 +18,8 @@ module.exports.default = (router) => {
             }
         };
 
-        req.app.db.collection('events').get().then(function(querySnapshot) {
-            querySnapshot.forEach(function(doc) {
+        req.app.db.collection('events').get().then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
                 data.events.push(doc.data());
             });
             res.renderVue('main/main', data, vueOptions);
@@ -27,15 +27,13 @@ module.exports.default = (router) => {
     });
 
     router.post('/', (req, res) => {
-      console.log(req.body)
-      req.app.db.collection('events').add(
-        {
-          name: req.body.name,
-          description: req.body.description
-        }
-      )
-      .then(function(querySnapshot) {
-        res.redirect('/');
-      });
+        req.app.db.collection('events').add(
+            {
+                name: req.body.name,
+                description: req.body.description
+            }
+        ).then(() => {
+            res.redirect('/');
+        });
     });
 };
