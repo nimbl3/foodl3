@@ -21,18 +21,10 @@ module.exports.init = (app, config) => {
     const env = process.env.NODE_ENV || 'development';
     const router = express.Router();
 
-    firebase.initializeApp({
-        apiKey: 'AIzaSyDCynSx-SxaSy7AQGIeJzrkg2c0zHR6-RM',
-        authDomain: 'foodl3-526fa.firebaseapp.com',
-        databaseURL: 'https://foodl3-526fa.firebaseio.com',
-        projectId: 'foodl3-526fa'
-    });
-    // Initialize Cloud Firestore and Firebase Auth
+    // Initialize Cloud Firestore
+    firebase.initializeApp(config.firebase);
     const db = firebase.firestore();
-    const auth = firebase.auth();
     app.db = db;
-    app.auth = auth;
-    app.user = auth.currentUser;
 
     let logType = 'dev';
     app.locals.ENV = env;
