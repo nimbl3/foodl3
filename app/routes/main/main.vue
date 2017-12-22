@@ -1,5 +1,7 @@
 <template>
     <div>
+        <h1>{{ title }}</h1>
+        <a href="/logout">Logout</a>
         <h2>Events</h2>
         <form method="post">
           <input type="hidden" name="_csrf" :value="csrfToken">
