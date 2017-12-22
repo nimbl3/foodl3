@@ -1,4 +1,6 @@
 //
+const SlackNotification = require('../../services/notification/slack');
+const url = require('url');
 
 module.exports.default = (router) => {
     router.get('/', (req, res) => {
@@ -27,13 +29,24 @@ module.exports.default = (router) => {
     });
 
     router.post('/', (req, res) => {
-        req.app.db.collection('events').add(
-            {
-                name: req.body.name,
-                description: req.body.description
-            }
-        ).then(() => {
-            res.redirect('/');
+        let event = {
+            name: req.body.name,
+            description: req.body.description
+        };
+        req.app.db.collection('events').add(event).then((eventDoc) => {
+            req.app.db
+                .collection('teams').doc(req.session.team.domain)
+                .collection('integrations').doc('slack')
+                .get().then((doc) => {
+                    let eventUrl = url.format({
+                        protocol: req.protocol,
+                        host: req.get('host'),
+                        pathname: `/detail/${eventDoc.id}`
+                    });
+                    let message = `:zap::zap::zap: ${event.name} :zap::zap::zap: <${eventUrl}|See details>`;
+                    new SlackNotification(doc.data().webhookUrl, message).notify();
+                    res.redirect('/');
+                });
         });
     });
 };
