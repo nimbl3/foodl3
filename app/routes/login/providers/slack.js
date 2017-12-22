@@ -10,7 +10,7 @@ module.exports.default = (router) => {
             code: req.query.code
         };
 
-        request({url: slackOAuthAccessUrl, qs: params}, (error, response, body) => {
+        request({ url: slackOAuthAccessUrl, qs: params }, (error, response, body) => {
             let responseBody = JSON.parse(body);
 
             if (error !== null || !responseBody.ok) {
