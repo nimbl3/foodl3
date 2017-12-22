@@ -2,6 +2,11 @@
 
 module.exports.default = (router) => {
     router.get('/', (req, res) => {
+        if (!req.session.user) {
+            res.redirect('/login');
+            return;
+        }
+
         const data = {
             title: 'Hello World',
             events: []
@@ -12,7 +17,7 @@ module.exports.default = (router) => {
             }
         };
 
-        req.app.locals.db.collection('events').get().then(function(querySnapshot) {
+        req.app.db.collection('events').get().then(function(querySnapshot) {
             querySnapshot.forEach(function(doc) {
                 data.events.push(doc.data());
             });

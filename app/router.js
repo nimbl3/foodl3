@@ -27,14 +27,17 @@ module.exports.init = (app, config) => {
         databaseURL: 'https://foodl3-526fa.firebaseio.com',
         projectId: 'foodl3-526fa'
     });
-    // Initialize Cloud Firestore through Firebase
+    // Initialize Cloud Firestore and Firebase Auth
     const db = firebase.firestore();
+    const auth = firebase.auth();
+    app.db = db;
+    app.auth = auth;
+    app.user = auth.currentUser;
 
     let logType = 'dev';
     app.locals.ENV = env;
     app.locals.ENV_DEVELOPMENT = (env === 'development');
     app.locals.rootPath = process.env.ROOT_PATH;
-    app.locals.db = db;
 
     //ExpressVue Setup
     //Latest non-production version of vue as of writing this doc, 
