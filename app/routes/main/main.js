@@ -26,12 +26,13 @@ module.exports.default = (router) => {
                event['id'] = doc.id;
                data.events.push(event);
             });
-            
+
             res.renderVue('main/main', data, vueOptions);
         });
     });
 
     router.post('/', (req, res) => {
+<<<<<<< HEAD
         let event = {
             name: req.body.name,
             description: req.body.description
@@ -51,5 +52,16 @@ module.exports.default = (router) => {
                     res.redirect('/');
                 });
         });
+=======
+      req.app.db.collection('events').add(
+        {
+          name: req.body.name,
+          description: req.body.description
+        }
+      )
+      .then(function(querySnapshot) {
+        res.redirect('/');
+      });
+>>>>>>> Add and show comment order in detail page and show avatar
     });
 };

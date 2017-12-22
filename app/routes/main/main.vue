@@ -14,6 +14,7 @@
 
 <script>
 import list from './main/components/list.vue';
+
 export default {
     data: function () {
         return {
