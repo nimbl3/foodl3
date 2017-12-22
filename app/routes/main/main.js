@@ -1,4 +1,6 @@
 //
+const SlackNotification = require('../../services/notification/slack');
+const url = require('url');
 
 module.exports.default = (router) => {
     router.get('/', (req, res) => {
@@ -18,8 +20,8 @@ module.exports.default = (router) => {
             }
         };
 
-        req.app.db.collection('events').get().then(function(querySnapshot) {
-            querySnapshot.forEach(function(doc) {
+        req.app.db.collection('events').get().then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
                 data.events.push(doc.data());
             });
             res.renderVue('main/main', data, vueOptions);
@@ -27,15 +29,24 @@ module.exports.default = (router) => {
     });
 
     router.post('/', (req, res) => {
-      console.log(req.body)
-      req.app.db.collection('events').add(
-        {
-          name: req.body.name,
-          description: req.body.description
-        }
-      )
-      .then(function(querySnapshot) {
-        res.redirect('/');
-      });
+        let event = {
+            name: req.body.name,
+            description: req.body.description
+        };
+        req.app.db.collection('events').add(event).then((eventDoc) => {
+            req.app.db
+                .collection('teams').doc(req.session.team.domain)
+                .collection('integrations').doc('slack')
+                .get().then((doc) => {
+                    let eventUrl = url.format({
+                        protocol: req.protocol,
+                        host: req.get('host'),
+                        pathname: `/detail/${eventDoc.id}`
+                    });
+                    let message = `:zap::zap::zap: ${event.name} :zap::zap::zap: <${eventUrl}|See details>`;
+                    new SlackNotification(doc.data().webhookUrl, message).notify();
+                    res.redirect('/');
+                });
+        });
     });
 };
