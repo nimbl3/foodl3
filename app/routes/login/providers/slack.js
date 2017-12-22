@@ -20,9 +20,20 @@ module.exports.default = (router) => {
                 return;
             }
 
+            let user = responseBody.user;
+            let team = responseBody.team;
+            // Set user session
             req.session.token = responseBody.access_token;
-            req.session.user = responseBody.user;
-            req.session.team = responseBody.team;
+            req.session.user = user;
+            req.session.team = team;
+            // Save user info
+            req.app.db.collection('users').doc(user.id).set({
+                name: user.name,
+                email: user.email,
+                imageUrl: user.image_512,
+                team: team.domain
+            });
+
             res.redirect('/');
         });
 
