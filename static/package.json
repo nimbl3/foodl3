@@ -1,0 +1,14 @@
+{
+  "name": "foodl3-static-html",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "gulp",
+    "sass": "gulp sass"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0"
+  }
+}
