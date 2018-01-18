@@ -11,3 +11,4 @@ coverage/
 debianpkg/
 .postinst
 geo.mmdb
+.DS_Store
