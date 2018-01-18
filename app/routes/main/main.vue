@@ -10,7 +10,7 @@
       </div>
       <div>
         <label>Order time</label>
-        <input type="datetime-local" name="event_ends_at" required>
+        <input type="datetime-local" name="end_date" required>
       </div>
       <div>
         <label>Details</label>

@@ -34,7 +34,7 @@ module.exports.default = (router) => {
   router.post('/event', (req, res) => {
     let event = {
       name: req.body.name,
-      endDate: req.body.event_ends_at,
+      endDate: req.body.end_date,
       description: req.body.description,
       createdAt: req.app.currentTimestamp
     };
