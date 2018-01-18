@@ -2,11 +2,21 @@
   <div>
     <a href="/logout">Logout</a>
     <h2>Events</h2>
-    <form method="post">
+    <form action="/event" method="post">
       <input type="hidden" name="_csrf" :value="csrfToken">
-      Name : <input type="text" name="name"><br>
-      Details : <textarea name="description" placeholder="add multiple lines"></textarea><br>
-      <button type="submit" value="Submit">Create</button>
+      <div>
+        <label>Name</label>
+        <input type="text" name="name" placeholder="Event Name" required>
+      </div>
+      <div>
+        <label>Order time</label>
+        <input type="datetime-local" name="end_date" required>
+      </div>
+      <div>
+        <label>Details</label>
+        <textarea name="description" placeholder="Event Details"></textarea>
+      </div>
+      <button type="submit">Add</button>
     </form>
     <list :list="events"></list>
   </div>
@@ -24,7 +34,3 @@
     }
   };
 </script>
-
-<style lang="css">
-
-</style>
