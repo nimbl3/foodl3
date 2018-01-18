@@ -4,8 +4,18 @@
     <h2>Events</h2>
     <form method="post">
       <input type="hidden" name="_csrf" :value="csrfToken">
-      Name : <input type="text" name="name"><br>
-      Details : <textarea name="description" placeholder="add multiple lines"></textarea><br>
+      <div>
+        <label>Name</label>
+        <input type="text" name="name" placeholder="Event Name">
+      </div>
+      <div>
+        <label>Order time</label>
+        <input type="datetime-local" name="event_ends_at">
+      </div>
+      <div>
+        <label>Details</label>
+        <textarea name="description" placeholder="Event Details"></textarea>
+      </div>
       <button type="submit" value="Submit">Create</button>
     </form>
     <list :list="events"></list>
@@ -24,7 +34,3 @@
     }
   };
 </script>
-
-<style lang="css">
-
-</style>
