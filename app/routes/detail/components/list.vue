@@ -1,21 +1,21 @@
 <template>
-    <ul>
-        <li v-for="order in list">
-          <div class="order-container">
-            <img class="avatar" :src="`${order.userAvatar}`" />
-            <div class="text-container">
-              <p>Order Name : {{ order.order }}</p>
-              <p>Link : {{ order.link }}</p>
-            </div>
-          </div>
-        </li>
-    </ul>
+  <ul>
+    <li v-for="order in list">
+      <div class="order-container">
+        <img class="avatar" :src="`${order.userAvatar}`"/>
+        <div class="text-container">
+          <p>Order Name : {{ order.order }}</p>
+          <p>Link : {{ order.link }}</p>
+        </div>
+      </div>
+    </li>
+  </ul>
 </template>
 
 <script>
-export default {
+  export default {
     props: ['list']
-}
+  };
 </script>
 
 <style lang="css">
