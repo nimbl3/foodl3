@@ -31,10 +31,12 @@ module.exports.default = (router) => {
     });
   });
 
-  router.post('/', (req, res) => {
+  router.post('/event', (req, res) => {
     let event = {
       name: req.body.name,
-      description: req.body.description
+      endDate: req.body.event_ends_at,
+      description: req.body.description,
+      createdAt: req.app.currentTimestamp
     };
 
     req.app.db.collection('events').add(event).then((eventDoc) => {
@@ -42,15 +44,15 @@ module.exports.default = (router) => {
         .collection('teams').doc(req.session.team.domain)
         .collection('integrations').doc('slack')
         .get().then((doc) => {
-        let eventUrl = url.format({
-          protocol: req.protocol,
-          host: req.get('host'),
-          pathname: `/detail/${eventDoc.id}`
+          let eventUrl = url.format({
+            protocol: req.protocol,
+            host: req.get('host'),
+            pathname: `/detail/${eventDoc.id}`
+          });
+          let message = `:zap::zap::zap: ${event.name} :zap::zap::zap: <${eventUrl}|See details>`;
+          new SlackNotification(doc.data().webhookUrl, message).notify();
+          res.redirect('/');
         });
-        let message = `:zap::zap::zap: ${event.name} :zap::zap::zap: <${eventUrl}|See details>`;
-        new SlackNotification(doc.data().webhookUrl, message).notify();
-        res.redirect('/');
-      });
     });
   });
 };

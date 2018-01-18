@@ -23,7 +23,9 @@ module.exports.init = (app, config) => {
 
   // Initialize Cloud Firestore
   firebase.initializeApp(config.firebase);
+  const currentTimestamp = firebase.firestore.FieldValue.serverTimestamp();
   const db = firebase.firestore();
+  app.currentTimestamp = currentTimestamp;
   app.db = db;
 
   let logType = 'dev';
