@@ -2,15 +2,15 @@
   <div>
     <a href="/logout">Logout</a>
     <h2>Events</h2>
-    <form method="post">
+    <form action="/event" method="post">
       <input type="hidden" name="_csrf" :value="csrfToken">
       <div>
         <label>Name</label>
-        <input type="text" name="name" placeholder="Event Name">
+        <input type="text" name="name" placeholder="Event Name" required>
       </div>
       <div>
         <label>Order time</label>
-        <input type="datetime-local" name="event_ends_at">
+        <input type="datetime-local" name="event_ends_at" required>
       </div>
       <div>
         <label>Details</label>
