@@ -16,7 +16,7 @@
         <label>Details</label>
         <textarea name="description" placeholder="Event Details"></textarea>
       </div>
-      <button type="submit" value="Submit">Create</button>
+      <button type="submit">Add</button>
     </form>
     <list :list="events"></list>
   </div>
