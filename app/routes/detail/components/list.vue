@@ -4,11 +4,11 @@
       <div class="order-container">
         <dl>
           <dt>Name</dt>
-          <dd>{{ order.name }}</dd>
+          <dd>{{order.name}}</dd>
           <dt>Price</dt>
-          <dd>{{ order.price }}</dd>
+          <dd>{{order.price}}</dd>
           <dt>Link</dt>
-          <dd>{{ order.link }}</dd>
+          <dd>{{order.link}}</dd>
           <user-list :users="order.users"></user-list>
           <form :action="`/order/${order.id}/join`" method="post">
             <input type="hidden" name="_csrf" :value="token">
