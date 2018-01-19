@@ -16,6 +16,11 @@ body {
   line-height: 1;
 }
 
+.container {
+  width: 1100px;
+  max-width: 100%;
+}
+
 .login {
   display: flex;
   flex-direction: column;
@@ -60,4 +65,71 @@ body {
 .login__with-slack {
   width: 100%;
   height: 100%;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 9rem;
+  background-color: #fff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.07);
+}
+
+.navbar > .container, .navbar__end, .navbar__user {
+  display: flex;
+  align-items: center;
+}
+
+.navbar > .container {
+  justify-content: space-between;
+  height: 100%;
+}
+
+.navbar__logo, .navbar__logout {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.navbar__logo {
+  width: 11rem;
+  height: 2.832rem;
+  background-image: url("/assets/images/logo.png");
+}
+
+.navbar__user {
+  border-right: 1px solid #f1f1f1;
+}
+
+.navbar__greetings {
+  margin-right: 1.6rem;
+  color: #000;
+  font-size: 1.6rem;
+  line-height: 1.1875;
+}
+
+.navbar__profile {
+  width: 6.4rem;
+  height: 5.1rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.navbar__profile::after {
+  content: " ";
+  display: block;
+  width: 4.1rem;
+  height: 4.1rem;
+  margin: 0.5rem auto;
+  border-radius: 50%;
+  background-color: #ffbc27;
+}
+
+.navbar__logout {
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-left: 1.9rem;
+  background-image: url("/assets/images/icon-logout.svg");
 }
