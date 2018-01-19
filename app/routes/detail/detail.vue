@@ -1,17 +1,33 @@
 <template>
   <div>
-    <h2>{{detail.name}}</h2>
-    <div class="detail-container">
-      <p>Detail : </p>
-      <div>{{detail.description}}</div>
-    </div>
-    <form method="post" :action="`/order/${eventId}`">
+    <h2>{{event.name}}</h2>
+    <dl>
+      <dt>Detail</dt>
+      <dd>{{event.description}}</dd>
+      <dt>Event Ends At</dt>
+      <dd>{{event.endDate}}</dd>
+    </dl>
+    <button type="button">Edit</button>
+    <button type="button">Delete</button>
+
+    <list :token="csrfToken" :event="event" :orders="orders"></list>
+
+    <form method="post" :action="`/event/${eventId}/order/new`">
       <input type="hidden" name="_csrf" :value="csrfToken">
-      Order Name : <input type="text" name="order"><br>
-      Link : <input type="text" name="link"><br>
-      <button type="submit" value="Submit">Comment</button>
+      <div>
+        <label>Order Name</label>
+        <input type="text" name="name" required>
+      </div>
+      <div>
+        <label>Price</label>
+        <input type="number" name="price">
+      </div>
+      <div>
+        <label>Link</label>
+        <input type="text" name="link">
+      </div>
+      <button type="submit">Add menu</button>
     </form>
-    <list :list="orders"></list>
   </div>
 </template>
 
@@ -27,9 +43,3 @@
     }
   };
 </script>
-
-<style lang="css">
-  .detail-container {
-    margin-bottom: 30px;
-  }
-</style>
