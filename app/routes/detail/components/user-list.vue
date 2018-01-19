@@ -11,3 +11,12 @@
     props: ['users']
   };
 </script>
+
+<style lang="css">
+  .avatar {
+    width: 45px;
+    height: 45px;
+    margin-right: 20px;
+    border-radius: 100%;
+  }
+</style>

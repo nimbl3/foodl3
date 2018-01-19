@@ -5,7 +5,7 @@
         <div class="text-container">
           <p>Order Name : {{ order.name }}</p>
           <p>Link : {{ order.link }}</p>
-          <userList :order="order" :users="order.users"></userList>
+          <userList :users="order.users"></userList>
         </div>
       </div>
     </li>
@@ -26,13 +26,6 @@
 <style lang="css">
   ul {
     list-style: none;
-  }
-
-  .avatar {
-    width: 45px;
-    height: 45px;
-    margin-right: 20px;
-    border-radius: 100%;
   }
 
   .order-container {
