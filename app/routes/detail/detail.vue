@@ -10,9 +10,9 @@
     <button type="button">Edit</button>
     <button type="button">Delete</button>
 
-    <list :orders="orders"></list>
+    <list :token="csrfToken" :event="event" :orders="orders"></list>
 
-    <form method="post" :action="`/order/${eventId}`">
+    <form method="post" :action="`/event/${eventId}/order/new`">
       <input type="hidden" name="_csrf" :value="csrfToken">
       <div>
         <label>Order Name</label>
