@@ -1,11 +1,11 @@
 <template>
   <ul>
-    <li v-for="order in list">
+    <li v-for="order in orders">
       <div class="order-container">
-        <img class="avatar" :src="`${order.userAvatar}`"/>
         <div class="text-container">
           <p>Order Name : {{ order.name }}</p>
           <p>Link : {{ order.link }}</p>
+          <userList :order="order" :users="order.users"></userList>
         </div>
       </div>
     </li>
@@ -13,8 +13,13 @@
 </template>
 
 <script>
+  import userList from './detail/components/user-list.vue';
+
   export default {
-    props: ['list']
+    props: ['orders'],
+    components: {
+      userList: userList
+    }
   };
 </script>
 

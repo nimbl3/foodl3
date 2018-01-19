@@ -10,7 +10,7 @@
     <button type="button">Edit</button>
     <button type="button">Delete</button>
 
-    <list :list="orders"></list>
+    <list :orders="orders"></list>
 
     <form method="post" :action="`/order/${eventId}`">
       <input type="hidden" name="_csrf" :value="csrfToken">

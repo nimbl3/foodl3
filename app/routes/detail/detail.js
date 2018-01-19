@@ -23,7 +23,6 @@ module.exports.default = (router) => {
       });
 
       res.renderVue('detail/detail', data, vueOptions);
-
     });
   });
 

@@ -5,3 +5,9 @@
     </li>
   </ul>
 </template>
+
+<script>
+  export default {
+    props: ['users']
+  };
+</script>
