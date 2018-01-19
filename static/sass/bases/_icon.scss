@@ -1,0 +1,16 @@
+@import "../variables";
+
+.icon {
+  display: block;
+  background: {
+    repeat: no-repeat;
+    position: center center;
+    size: cover;
+  };
+
+  &--options {
+    width: 0.4rem;
+    height: 2rem;
+    background-image: url($image-path + "/icon-menu-more.svg");
+  }
+}
