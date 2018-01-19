@@ -30,6 +30,7 @@
   }
 
   &--outlined {
+    color: $soft-text-color;
     border: 1px solid $primary-color;
     border-radius: 2.15rem;
     background-color: transparent;
