@@ -9,17 +9,181 @@
     <link rel="stylesheet" href="/assets/stylesheet/style.css">
   </head>
   <body>
+    <!-- Navigation bar -->
     <nav class="navbar">
       <div class="container">
         <a href="#" class="navbar__logo"></a>
         <div class="navbar__end">
           <div class="navbar__user">
             <span class="navbar__greetings">Hello, Natalie</span>
-            <sapn class="navbar__profile"></sapn>
+            <span class="navbar__profile"></span>
           </div>
           <a href="#" class="navbar__logout"></a>
         </div>
       </div>
     </nav>
+
+    <!-- Event Section -->
+    <section class="table-list">
+      <div class="container">
+        <header class="table-list__header">
+          <h1 class="table-list__title">Event</h1>
+          <button type="button" class="button button--primary button--large">&plus; Add Event</button>
+        </header>
+        <table class="table-list__table">
+            <thead>
+              <tr class="table-list__row">
+                <th class="table-list__head">Event Name</th>
+                <th class="table-list__head">Order Time</th>
+                <th class="table-list__head">Member</th>
+                <th class="table-list__head"></th>
+                <th class="table-list__head"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table-list__row">
+                <td class="table-list__column">Pizza Party!</td>
+                <td class="table-list__column">20 NOV 2017, 12:00 PM</td>
+                <td class="table-list__column">
+                  <ul class="table-list__member">
+                    <li class="table-list__member-item">
+                      <span class="table-list__member-profile"></span>
+                    </li>
+                    <li class="table-list__member-item">
+                      <span class="table-list__member-profile"></span>
+                    </li>
+                    <li class="table-list__member-item">
+                      <span class="table-list__member-profile"></span>
+                    </li>
+                    <li class="table-list__member-item">
+                      <span class="table-list__member-profile"></span>
+                    </li>
+                    <li class="table-list__member-item">
+                      <span class="table-list__member-profile">+2</span>
+                    </li>
+                  </ul>
+                </td>
+                <td class="table-list__column">
+                  <a href="#" class="button button-primary button--outlined">View</a>
+                </td>
+                <td class="table-list__column">
+                  <button type="button" class="button button--options">
+                    <i class="icon icon--options"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr class="table-list__row">
+                  <td class="table-list__column">Let’s eat fried chicken</td>
+                  <td class="table-list__column">20 NOV 2017, 12:00 PM</td>
+                  <td class="table-list__column">
+                    <ul class="table-list__member">
+                      <li class="table-list__member-item">
+                        <span class="table-list__member-profile"></span>
+                      </li>
+                      <li class="table-list__member-item">
+                        <span class="table-list__member-profile"></span>
+                      </li>
+                      <li class="table-list__member-item">
+                        <span class="table-list__member-profile"></span>
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="table-list__column">
+                    <a href="#" class="button button-primary button--outlined">View</a>
+                  </td>
+                  <td class="table-list__column">
+                    <button type="button" class="button button--options">
+                      <i class="icon icon--options"></i>
+                    </button>
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+      </div>
+    </section>
+
+    <!-- Past Event -->
+    <section class="table-list">
+        <div class="container">
+          <header class="table-list__header">
+            <h1 class="table-list__title">Past Event</h1>
+          </header>
+          <table class="table-list__table">
+              <thead>
+                <tr class="table-list__row">
+                  <th class="table-list__head">Event Name</th>
+                  <th class="table-list__head">Order Time</th>
+                  <th class="table-list__head">Member</th>
+                  <th class="table-list__head"></th>
+                  <th class="table-list__head"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="table-list__row">
+                  <td class="table-list__column">Pizza Party!</td>
+                  <td class="table-list__column">
+                      18 NOV 2017, 12:00 PM
+                      <strong class="table-list__event-closed">* Event Closed</strong>
+                  </td>
+                  <td class="table-list__column">
+                    <ul class="table-list__member">
+                      <li class="table-list__member-item">
+                        <span class="table-list__member-profile"></span>
+                      </li>
+                      <li class="table-list__member-item">
+                        <span class="table-list__member-profile"></span>
+                      </li>
+                      <li class="table-list__member-item">
+                        <span class="table-list__member-profile"></span>
+                      </li>
+                      <li class="table-list__member-item">
+                        <span class="table-list__member-profile"></span>
+                      </li>
+                      <li class="table-list__member-item">
+                        <span class="table-list__member-profile">+2</span>
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="table-list__column">
+                    <a href="#" class="button button-primary button--outlined">View</a>
+                  </td>
+                  <td class="table-list__column">
+                    <button type="button" class="button button--options">
+                      <i class="icon icon--options"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr class="table-list__row">
+                    <td class="table-list__column">Who wants burger!</td>
+                    <td class="table-list__column">
+                        18 NOV 2017, 12:00 PM
+                        <strong class="table-list__event-closed">* Event Closed</strong>
+                    </td>
+                    <td class="table-list__column">
+                      <ul class="table-list__member">
+                        <li class="table-list__member-item">
+                          <span class="table-list__member-profile"></span>
+                        </li>
+                        <li class="table-list__member-item">
+                          <span class="table-list__member-profile"></span>
+                        </li>
+                        <li class="table-list__member-item">
+                          <span class="table-list__member-profile"></span>
+                        </li>
+                      </ul>
+                    </td>
+                    <td class="table-list__column">
+                      <a href="#" class="button button-primary button--outlined">View</a>
+                    </td>
+                    <td class="table-list__column">
+                      <button type="button" class="button button--options">
+                        <i class="icon icon--options"></i>
+                      </button>
+                    </td>
+                  </tr>
+              </tbody>
+            </table>
+        </div>
+      </section>
   </body>
 </html>
