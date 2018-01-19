@@ -17,7 +17,7 @@ module.exports.default = (router) => {
     let getOrders = req.app.db.collection('events').doc(req.params.id).collection('orders').get();
 
     Promise.all([getDetail, getOrders]).then(values => {
-      data['detail'] = values[0].data();
+      data.event = values[0].data();
       values[1].forEach(function (order) {
         data.orders.push(order.data());
       });
@@ -28,18 +28,17 @@ module.exports.default = (router) => {
   });
 
   router.post('/order/:id', (req, res) => {
-    console.log('----------------');
-    console.log(req.session.user);
-    console.log('----------------');
     req.app.db.collection('events').doc(req.params.id).collection('orders').add(
       {
-        order: req.body.order,
+        name: req.body.name,
+        price: req.body.price,
         link: req.body.link,
+
         userName: req.session.user.name,
         userAvatar: req.session.user.image_512
       }
     )
-      .then(function (querySnapshot) {
+      .then(() => {
         res.redirect('/detail/' + req.params.id);
       });
   });

@@ -4,7 +4,7 @@
       <div class="order-container">
         <img class="avatar" :src="`${order.userAvatar}`"/>
         <div class="text-container">
-          <p>Order Name : {{ order.order }}</p>
+          <p>Order Name : {{ order.name }}</p>
           <p>Link : {{ order.link }}</p>
         </div>
       </div>
