@@ -37,6 +37,11 @@
     list-style: none;
   }
 
+  ul li {
+    display: inline-block;
+    padding-right: 1rem;
+  }
+
   .order-container {
     display: inline-flex;
     margin-bottom: 10px;
