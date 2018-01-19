@@ -1,0 +1,19 @@
+@import "../variables";
+
+.button {
+  border: 1px solid $primary-color;
+  border-radius: 3rem;
+  padding: 1.8rem 3rem;
+  color: $white;
+  font-size: 1.4rem;
+  line-height: (1.7 / 1.4);
+  text-transform: uppercase;
+  background-color: $primary-color;
+
+  &:focus,
+  &:hover,
+  &:active {
+    cursor: pointer;
+    background-color: darken($primary-color, 5%);
+  }
+}

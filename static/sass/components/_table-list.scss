@@ -1,0 +1,20 @@
+@import "../variables";
+
+.table-list {
+  display: flex;
+  justify-content: center;
+
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    color: $text-color;
+    font-size: 3.6rem;
+    line-height: (4.4 / 3.6);
+    text-transform: uppercase;
+  }
+}
