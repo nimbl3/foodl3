@@ -1,6 +1,6 @@
 //
 const request = require('request');
-const config = require('../../../config');
+const config = require('../../config');
 const slackOAuthAccessUrl = 'https://slack.com/api/oauth.access';
 
 module.exports.default = (router) => {
@@ -16,7 +16,7 @@ module.exports.default = (router) => {
 
       if (error !== null || !responseBody.ok) {
         // TODO: Should render error 500
-        res.renderVue('error', {title: 'Error', debug: false});
+        res.renderVue('../screens/error', {title: 'Error', debug: false});
         return;
       }
 

@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div class="screen event-detail">
+    <app-header></app-header>
     <h2>{{event.name}}</h2>
     <dl>
       <dt>Detail</dt>
@@ -10,7 +11,7 @@
     <button type="button">Edit</button>
     <button type="button">Delete</button>
 
-    <list :token="csrfToken" :event="event" :orders="orders"></list>
+    <order-list :token="csrfToken" :event="event" :orders="orders"></order-list>
 
     <form method="post" :action="`/event/${eventId}/order/new`">
       <input type="hidden" name="_csrf" :value="csrfToken">
@@ -32,14 +33,16 @@
 </template>
 
 <script>
-  import list from './detail/components/list.vue';
+  import appHeader from './layouts/AppHeader.vue';
+  import orderList from './OrderList.vue';
 
   export default {
     data: function () {
       return {};
     },
     components: {
-      list: list
+      appHeader,
+      orderList
     }
   };
 </script>

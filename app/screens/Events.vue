@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <a href="/logout">Logout</a>
+  <div class="screen event">
+    <app-header></app-header>
     <h2>Events</h2>
     <form action="/event" method="post">
       <input type="hidden" name="_csrf" :value="csrfToken">
@@ -18,19 +18,21 @@
       </div>
       <button type="submit">Add</button>
     </form>
-    <list :list="events"></list>
+    <event-list :events="events"></event-list>
   </div>
 </template>
 
 <script>
-  import list from './main/components/list.vue';
+  import appHeader from './layouts/AppHeader.vue';
+  import eventList from './EventList.vue';
 
   export default {
     data: function () {
       return {};
     },
     components: {
-      list: list
+      appHeader,
+      eventList
     }
   };
 </script>

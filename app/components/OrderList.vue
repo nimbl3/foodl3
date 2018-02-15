@@ -22,12 +22,12 @@
 </template>
 
 <script>
-  import userList from './detail/components/user-list.vue';
+  import userList from './UserList.vue';
 
   export default {
     props: ['token', 'event', 'orders'],
     components: {
-      userList: userList
+      userList
     }
   };
 </script>
