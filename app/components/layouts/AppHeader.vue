@@ -5,25 +5,21 @@
     </a>
     <div>
       <span>Hello {{ currentUser.name }}</span>
-      <img class="avatar" :src=currentUser.avatar />
+      <user-avatar :user="currentUser"></user-avatar>
     <a href="/logout">Logout</a>
   </header>
 </template>
 
 <script>
+  import userAvatar from './UserAvatar.vue';
   export default {
     data: function () {
       return {};
     },
     props: ['currentUser'],
+    components: {
+      userAvatar
+    }
   };
 </script>
-
-<!-- TODO: Remove this temporary styling -->
-<style lang="scss">
-  .avatar {
-    width: 4rem;
-    height: 4rem;
-  }
-</style>
 
