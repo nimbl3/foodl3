@@ -7,11 +7,6 @@ module.exports.default = (router) => {
       eventId: req.params.id,
       orders: []
     };
-    let vueOptions = {
-      head: {
-        title: 'Express-Vue MVC Starter Kit'
-      }
-    };
 
     let getDetail = req.app.db.collection('events').doc(req.params.id).get();
     let getOrders = req.app.db.collection('events').doc(req.params.id).collection('orders').get();
@@ -22,7 +17,7 @@ module.exports.default = (router) => {
         data.orders.push(Object.assign({ id: order.id }, order.data()));
       });
 
-      res.renderVue('../views/events/show', data, vueOptions);
+      res.renderVue('../screens/eventDetail', data);
     });
   });
 

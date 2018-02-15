@@ -15,6 +15,6 @@ module.exports.default = (router) => {
     };
 
     let loginUrl = [slackOAuthUrl, querystring.stringify(params)].join('?');
-    res.renderVue('../views/login/index', {loginUrl: loginUrl});
+    res.renderVue('../screens/login', {loginUrl: loginUrl});
   });
 };

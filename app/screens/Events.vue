@@ -23,7 +23,7 @@
 </template>
 
 <script>
-  import eventList from './events/_event-list.vue';
+  import eventList from './EventList.vue';
 
   export default {
     data: function () {

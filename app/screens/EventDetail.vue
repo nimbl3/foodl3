@@ -32,7 +32,7 @@
 </template>
 
 <script>
-  import orderList from './events/_order-list.vue';
+  import orderList from './OrderList.vue';
 
   export default {
     data: function () {

@@ -14,11 +14,6 @@ module.exports.default = (router) => {
       events: [],
       csrfToken: req.csrfToken()
     };
-    const vueOptions = {
-      head: {
-        title: 'Express-Vue MVC Starter Kit'
-      }
-    };
 
     req.app.db.collection('events').get().then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
@@ -27,7 +22,7 @@ module.exports.default = (router) => {
         data.events.push(event);
       });
 
-      res.renderVue('../views/events/index', data, vueOptions);
+      res.renderVue('../screens/events', data);
     });
   });
 

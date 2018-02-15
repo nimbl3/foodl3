@@ -45,14 +45,15 @@ module.exports.init = (app, config) => {
   }
 
   const vueOptions = {
-    rootPath: path.join(__dirname, 'views'),
+    rootPath: path.join(__dirname, 'components'),
     vue: {
       head: {
         meta: [{
           script: vueScript
         }, {
           style: 'assets/rendered/style.css'
-        }]
+        }],
+        title: 'Foodl3'
       }
     }
   };
@@ -136,7 +137,7 @@ module.exports.init = (app, config) => {
       }
     };
     res.statusCode = 404;
-    res.renderVue('../views/error', data, vueOptions);
+    res.renderVue('../screens/error', data, vueOptions);
   });
 
   app.use(function onError(error, req, res, next) {
@@ -147,7 +148,7 @@ module.exports.init = (app, config) => {
       error: error.stack
     };
     if (res.statusCode) {
-      res.renderVue('../views/error', data);
+      res.renderVue('../screens/error', data);
     } else {
       next();
     }
