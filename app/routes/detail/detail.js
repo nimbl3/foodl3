@@ -22,7 +22,7 @@ module.exports.default = (router) => {
         data.orders.push(Object.assign({ id: order.id }, order.data()));
       });
 
-      res.renderVue('detail/detail', data, vueOptions);
+      res.renderVue('../views/events/show', data, vueOptions);
     });
   });
 

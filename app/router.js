@@ -136,7 +136,7 @@ module.exports.init = (app, config) => {
       }
     };
     res.statusCode = 404;
-    res.renderVue('error', data, vueOptions);
+    res.renderVue('../views/error', data, vueOptions);
   });
 
   app.use(function onError(error, req, res, next) {
@@ -147,7 +147,7 @@ module.exports.init = (app, config) => {
       error: error.stack
     };
     if (res.statusCode) {
-      res.renderVue('error', data);
+      res.renderVue('../views/error', data);
     } else {
       next();
     }

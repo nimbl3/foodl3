@@ -22,7 +22,7 @@
 </template>
 
 <script>
-  import userList from './detail/components/user-list.vue';
+  import userList from './events/_user-list.vue';
 
   export default {
     props: ['token', 'event', 'orders'],

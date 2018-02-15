@@ -16,7 +16,7 @@ module.exports.default = (router) => {
 
       if (error !== null || !responseBody.ok) {
         // TODO: Should render error 500
-        res.renderVue('error', {title: 'Error', debug: false});
+        res.renderVue('../views/error', {title: 'Error', debug: false});
         return;
       }
 
