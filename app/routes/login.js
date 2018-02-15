@@ -1,6 +1,6 @@
 //
 const querystring = require('querystring');
-const config = require('../../config');
+const config = require('../config');
 const slackOAuthUrl = 'https://slack.com/oauth/authorize';
 
 module.exports.default = (router) => {
