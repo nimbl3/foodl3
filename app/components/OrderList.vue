@@ -27,7 +27,7 @@
   export default {
     props: ['token', 'event', 'orders'],
     components: {
-      userList: userList
+      userList
     }
   };
 </script>

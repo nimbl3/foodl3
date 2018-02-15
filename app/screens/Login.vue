@@ -1,5 +1,5 @@
 <template>
-  <div class="login">
+  <div class="screen login">
     <h1>Foodl3</h1>
     <a v-bind:href="loginUrl">
       <img alt="Sign in with Slack" height="40" width="172"

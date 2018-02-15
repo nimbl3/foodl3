@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div class="screen event-detail">
+    <app-header></app-header>
     <h2>{{event.name}}</h2>
     <dl>
       <dt>Detail</dt>
@@ -32,6 +33,7 @@
 </template>
 
 <script>
+  import appHeader from './layouts/AppHeader.vue';
   import orderList from './OrderList.vue';
 
   export default {
@@ -39,7 +41,8 @@
       return {};
     },
     components: {
-      orderList: orderList
+      appHeader,
+      orderList
     }
   };
 </script>

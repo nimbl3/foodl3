@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <a href="/logout">Logout</a>
+  <div class="screen event">
+    <app-header></app-header>
     <h2>Events</h2>
     <form action="/event" method="post">
       <input type="hidden" name="_csrf" :value="csrfToken">
@@ -23,6 +23,7 @@
 </template>
 
 <script>
+  import appHeader from './layouts/AppHeader.vue';
   import eventList from './EventList.vue';
 
   export default {
@@ -30,7 +31,8 @@
       return {};
     },
     components: {
-      eventList: eventList
+      appHeader,
+      eventList
     }
   };
 </script>
