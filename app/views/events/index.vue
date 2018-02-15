@@ -18,19 +18,19 @@
       </div>
       <button type="submit">Add</button>
     </form>
-    <list :list="events"></list>
+    <event-list :events="events"></event-list>
   </div>
 </template>
 
 <script>
-  import list from './main/components/list.vue';
+  import eventList from './events/_event-list.vue';
 
   export default {
     data: function () {
       return {};
     },
     components: {
-      list: list
+      eventList: eventList
     }
   };
 </script>

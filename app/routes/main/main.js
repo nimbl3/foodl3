@@ -27,7 +27,7 @@ module.exports.default = (router) => {
         data.events.push(event);
       });
 
-      res.renderVue('main/main', data, vueOptions);
+      res.renderVue('../views/events/index', data, vueOptions);
     });
   });
 

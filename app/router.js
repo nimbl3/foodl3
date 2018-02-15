@@ -45,7 +45,7 @@ module.exports.init = (app, config) => {
   }
 
   const vueOptions = {
-    rootPath: path.join(__dirname, 'routes'),
+    rootPath: path.join(__dirname, 'views'),
     vue: {
       head: {
         meta: [{
