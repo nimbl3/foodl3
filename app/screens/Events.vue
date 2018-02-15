@@ -1,6 +1,6 @@
 <template>
   <div class="screen event">
-    <app-header></app-header>
+    <app-header :current-user="currentUser"></app-header>
     <h2>Events</h2>
     <form action="/event" method="post">
       <input type="hidden" name="_csrf" :value="csrfToken">

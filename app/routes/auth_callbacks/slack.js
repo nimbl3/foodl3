@@ -23,6 +23,7 @@ module.exports.default = (router) => {
       let user = responseBody.user;
       let team = responseBody.team;
       // Set user session
+      user.avatar = user.image_512;
       req.session.token = responseBody.access_token;
       req.session.user = user;
       req.session.team = team;

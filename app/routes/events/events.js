@@ -12,7 +12,8 @@ module.exports.default = (router) => {
     const data = {
       title: 'Hello World',
       events: [],
-      csrfToken: req.csrfToken()
+      csrfToken: req.csrfToken(),
+      currentUser: req.session.user
     };
 
     req.app.db.collection('events').get().then((querySnapshot) => {
