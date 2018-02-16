@@ -47,6 +47,18 @@ gulp.task('vue', ['sass'], () => {
     .pipe(livereload());
 });
 
+gulp.task('fonts', function () {
+  return gulp.src("./app/assets/fonts/**/*")
+    .pipe(gulp.dest("./public/assets/fonts"))
+    .pipe(livereload())
+});
+
+gulp.task('images', function () {
+  return gulp.src("./app/assets/images/**/*")
+    .pipe(gulp.dest("./public/assets/images"))
+    .pipe(livereload())
+});
+
 gulp.task('babel', ['vue'], () => {
   const stream = gulp.src(paths.es6)
     .pipe(sourceMaps.init())
@@ -66,7 +78,7 @@ gulp.task('watch', ['babel'], function () {
     stdout: true,
     watch: 'app',
     ext: 'js scss vue',
-    tasks: ['clean', 'babel', 'vue', 'sass'],
+    tasks: ['clean', 'babel', 'vue', 'sass', 'images', 'fonts'],
   }).on('restart', function onRestart() {
     // reload connected browsers after a slight delay
     setTimeout(function reload() {

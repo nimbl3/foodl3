@@ -1,0 +1,32 @@
+// Colors
+$brand-gray: (
+  primary: #191919,
+  light: #161616
+);
+
+$brand-orange: (
+  primary: #ffbc27,
+  light: #ff4b4b
+);
+
+$brand-white: (
+  primary: #fff,
+  light: #f1f1f1,
+  lighter: #d8d8d8
+);
+
+// Fonts
+$base-font-size: 16px;
+
+$font: (
+  regular: "Brix Sans",
+  medium: "Brix Sans Medium",
+  bold: "Brix Sans Bold",
+  bolder: "Brix Sans Black"
+);
+
+// Paths
+$path: (
+  font: "/assets/fonts",
+  image: "/assets/images"
+);

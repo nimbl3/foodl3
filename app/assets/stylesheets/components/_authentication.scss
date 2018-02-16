@@ -1,0 +1,25 @@
+.authentication {
+  font-size: 1rem;
+
+  &__logo {
+    @include hide-text;
+
+    width: em(301px);
+    height: em(77px);
+    background: url(map-get($path, 'image') + "/logo.png") no-repeat center;
+    background-size: 100%;
+  }
+
+  &__tagline {
+    margin-top: em(33px, 24px);
+    font-size: rem(24px);
+    font-family: map-get($font, "bold");
+    line-height: strip-unit(29px / 24px);
+  }
+
+  &__with-slack {
+    width: em(320px);
+    height: em(80px);
+    margin-top: em(71px);
+  }
+}

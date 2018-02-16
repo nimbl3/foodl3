@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "Brix Sans";
+  src: url(map-get($path, 'font') + "/brix-sans-regular.ttf");
+}
+
+@font-face {
+  font-family: "Brix Sans Medium";
+  src: url(map-get($path, 'font') + "/brix-sans-medium.ttf");
+}
+
+@font-face {
+  font-family: "Brix Sans Bold";
+  src: url(map-get($path, 'font') + "/brix-sans-bold.ttf");
+}
+
+@font-face {
+  font-family: "Brix Sans Black";
+  src: url(map-get($path, 'font') + "/brix-sans-black.ttf");
+}

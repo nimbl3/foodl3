@@ -48,11 +48,12 @@ module.exports.init = (app, config) => {
     rootPath: path.join(__dirname, 'components'),
     vue: {
       head: {
-        meta: [{
-          script: vueScript
-        }, {
-          style: 'assets/rendered/style.css'
-        }],
+        meta: [
+          { charset: 'UTF-8'},
+          { name: 'viewport', content: 'width=device-width, user-scalable=no, initial-scale=1' },
+          { script: vueScript },
+          { style: 'assets/rendered/style.css' }
+        ],
         title: 'Foodl3'
       }
     }
@@ -75,6 +76,8 @@ module.exports.init = (app, config) => {
   app.use(validator());
 
   app.use(compress());
+
+  app.use(express.static('public'));
 
   app.use(app.locals.rootPath, express.static(config.root));
 
