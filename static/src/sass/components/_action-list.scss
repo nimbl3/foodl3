@@ -1,0 +1,36 @@
+.action-list {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+
+  &__item {
+    margin-left: em(34px);
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &__action {
+    display: flex;
+    align-items: baseline;
+    color: map-get($brand-gray, 'primary');
+    font-size: em(12px);
+    text-decoration: none;
+  }
+
+  &__label {
+    margin-left: em(11px, 12px);
+    box-sizing: border-box;
+    font-size: 1em;
+    line-height: (15px / 12px);
+  }
+
+  .icon {
+    &--edit,
+    &--delete {
+      width: em(13px, 12px);
+      height: em(13px, 12px);
+    }
+  }
+}

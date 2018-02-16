@@ -14,4 +14,19 @@
     line-height: strip-unit(44px / 36px);
     text-transform: uppercase;
   }
+
+  &__body {
+    margin-top: em(22px);
+    line-height: (28px / 16px);
+  }
+
+  &__action-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-top: em(28px, 14px);
+    border-bottom: 1px solid map-get($brand-white, 'light');
+    padding-bottom: em(19px, 14px);
+    font-size: em(14px);
+    line-height: (17px / 14px);
+  }
 }

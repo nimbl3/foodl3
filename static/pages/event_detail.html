@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en" class="layout-two-column">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Foodl3 - Event Detail</title>
+    <link rel="stylesheet" href="/assets/stylesheets/application.css">
+  </head>
+  <body class="screen-event-detail">
+    <!-- TopBar component -->
+    <nav class="top-bar">
+      <div class="top-bar__container">
+        <a class="top-bar__brand" href="/">Foodl3</a>
+        <ul class="top-bar__user">
+          <li>
+            <strong class="top-bar__greetings">Hello, Natalie</strong>
+          </li>
+          <li>
+            <figure class="avatar avatar--large">
+              <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+            </figure>
+          </li>
+          <li>
+            <a href="/" class="top-bar__logout">Log out</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main -->
+    <main>
+      <!-- Left column -->
+      <!-- Event component: Pizza Party! section -->
+      <section class="event">
+        <header class="event__header">
+          <h1 class="event__header-title">Pizza Party!</h1>
+          <ul class="user-list">
+            <li class="user-list__item">
+              <figure class="avatar">
+                <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+              </figure>
+            </li>
+            <li class="user-list__item">
+              <figure class="avatar">
+                <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+              </figure>
+            </li>
+            <li class="user-list__item">
+              <figure class="avatar">
+                <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+              </figure>
+            </li>
+            <li class="user-list__item">
+              <figure class="avatar">
+                <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+              </figure>
+            </li>
+            <li class="user-list__item">
+              <figure class="avatar">
+                <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+              </figure>
+            </li>
+          </ul>
+        </header>
+        <section class="event__body">
+          <p>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+              Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+              Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.<br><br>
+              <a href="/">www.foodordering.com</a>
+          </p>
+          <div class="event__action-bar">
+            <p>20 NOV 2017, 12:00 PM</p>
+            <ul class="action-list">
+              <li class="action-list__item">
+                  <a href="/" class="action-list__action">
+                    <i class="icon icon--edit"></i>
+                    <span class="action-list__label">Edit</span>
+                  </a>
+              </li>
+              <li class="action-list__item">
+                  <a href="/" class="action-list__action">
+                    <i class="icon icon--delete"></i>
+                    <span class="action-list__label">Delete</span>
+                  </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <table class="event-list">
+          <thead>
+            <tr>
+              <th class="event-list__header">Order List</th>
+              <th class="event-list__header">Amount</th>
+              <th class="event-list__header">Link</th>
+              <th class="event-list__header">Joiner</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="event-list__divider">
+              <td>
+                <span class="event-list__order-name">Pepporoni</span>
+                <span class="event-list__order-price">THB 210</span>
+              </td>
+              <td>
+                <span class="amount">
+                  <button type="button" class="amount__minus">
+                    <i class="icon icon--minus"></i>
+                  </button>
+                  <span class="amount__value">1</span>
+                  <button type="button" class="amount__plus">
+                    <i class="icon icon--plus"></i>
+                  </button>
+                </span>
+              </td>
+              <td>
+                <a href="/">www.foodordering.com</a>
+              </td>
+              <td>
+                <ul class="user-list">
+                  <li class="user-list__item">
+                    <figure class="avatar">
+                      <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+                    </figure>
+                  </li>
+                  <li class="user-list__item">
+                    <figure class="avatar">
+                      <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+                    </figure>
+                  </li>
+                  <li class="user-list__item">
+                    <figure class="avatar">
+                      <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+                    </figure>
+                  </li>
+                  <li class="user-list__item">
+                    <figure class="avatar">
+                      <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+                    </figure>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr class="event-list__divider">
+              <td>
+                <span class="event-list__order-name">Garlic Bread</span>
+                <span class="event-list__order-price">THB 100</span>
+              </td>
+              <td>
+                <span class="amount">
+                  <button type="button" class="amount__minus">
+                    <i class="icon icon--minus"></i>
+                  </button>
+                  <span class="amount__value">1</span>
+                  <button type="button" class="amount__plus">
+                    <i class="icon icon--plus"></i>
+                  </button>
+                </span>
+              </td>
+              <td>
+                <a href="/">www.foodordering.com</a>
+              </td>
+              <td>
+                <ul class="user-list">
+                  <li class="user-list__item">
+                    <figure class="avatar">
+                      <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+                    </figure>
+                  </li>
+                  <li class="user-list__item">
+                    <figure class="avatar">
+                      <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+                    </figure>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr class="event-list__divider">
+              <td>
+                <span class="event-list__order-name">Hawaiian</span>
+                <span class="event-list__order-price">THB 210</span>
+              </td>
+              <td>
+                <span class="amount">
+                  <button type="button" class="amount__minus">
+                    <i class="icon icon--minus"></i>
+                  </button>
+                  <span class="amount__value">1</span>
+                  <button type="button" class="amount__plus">
+                    <i class="icon icon--plus"></i>
+                  </button>
+                </span>
+              </td>
+              <td>
+                <a href="/">www.foodordering.com</a>
+              </td>
+              <td>
+                <ul class="user-list">
+                  <li class="user-list__item">
+                    <figure class="avatar">
+                      <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+                    </figure>
+                  </li>
+                  <li class="user-list__item">
+                    <figure class="avatar">
+                      <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+                    </figure>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr class="event-list__divider">
+              <td>
+                <span class="event-list__order-name">Chicken Wings</span>
+                <span class="event-list__order-price">THB 100</span>
+              </td>
+              <td>
+                <span class="amount">
+                  <button type="button" class="amount__minus">
+                    <i class="icon icon--minus"></i>
+                  </button>
+                  <span class="amount__value">1</span>
+                  <button type="button" class="amount__plus">
+                    <i class="icon icon--plus"></i>
+                  </button>
+                </span>
+              </td>
+              <td>
+                <a href="/">www.foodordering.com</a>
+              </td>
+              <td>
+                <ul class="user-list">
+                  <li class="user-list__item">
+                    <figure class="avatar">
+                      <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+                    </figure>
+                  </li>
+                  <li class="user-list__item">
+                    <figure class="avatar">
+                      <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+                    </figure>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr class="event-list__divider">
+              <td>
+                <span class="event-list__order-name">CocaCola</span>
+                <span class="event-list__order-price">THB 60</span>
+              </td>
+              <td>
+                <span class="amount">
+                  <button type="button" class="amount__minus">
+                    <i class="icon icon--minus"></i>
+                  </button>
+                  <span class="amount__value">1</span>
+                  <button type="button" class="amount__plus">
+                    <i class="icon icon--plus"></i>
+                  </button>
+                </span>
+              </td>
+              <td>
+                <a href="/">www.foodordering.com</a>
+              </td>
+              <td>
+                <ul class="user-list">
+                  <li class="user-list__item">
+                    <figure class="avatar">
+                      <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+                    </figure>
+                  </li>
+                  <li class="user-list__item">
+                    <figure class="avatar">
+                      <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+                    </figure>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Right column -->
+      <aside>
+        <section class="card">
+          <table class="table-summary">
+            <caption class="table-summary__title">Order Summary</caption>
+            <tfoot>
+              <tr>
+                <td class="table-summary__column">
+                  <strong class="table-summary__total">Total</strong>
+                  <small class="table-summary__fee">* Exclude vat and delivery fee</small>
+                </td>
+                <td class="table-summary__column">THB 990</td>
+              </tr>
+            </tfoot>
+            <tbody>
+              <tr>
+                <td class="table-summary__column">Pepporoni x 1</td>
+                <td class="table-summary__column">THB 210</td>
+              </tr>
+              <tr>
+                <td class="table-summary__column">Garlic Bread x 1</td>
+                <td class="table-summary__column">THB 100</td>
+              </tr>
+              <tr>
+                <td class="table-summary__column">Hawaiian x 1</td>
+                <td class="table-summary__column">THB 210</td>
+              </tr>
+              <tr>
+                <td class="table-summary__column">Chicken Wings x 1</td>
+                <td class="table-summary__column">THB 100</td>
+              </tr>
+              <tr>
+                <td class="table-summary__column">CocaCola x 1</td>
+                <td class="table-summary__column">THB 60</td>
+              </tr>
+              <tr>
+                <td class="table-summary__column">Cheese Pizza x 1</td>
+                <td class="table-summary__column">THB 210</td>
+              </tr>
+              <tr>
+                <td class="table-summary__column">Fries x 1</td>
+                <td class="table-summary__column">THB 100</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="card">
+          <table class="table-summary">
+            <tbody>
+              <tr>
+                <td class="table-summary__column">
+                  <strong class="table-summary__total">Price per person</strong>
+                  <small class="table-summary__fee">* Exclude vat and delivery fee</small>
+                </td>
+                <td class="table-summary__column">THB 165</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </aside>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <form class="form form--inline">
+        <div class="form__group">
+          <label for="order_name" class="form__sr">Order Name</label>
+          <input type="text" id="order_name" value="Margarita Pizza">
+        </div>
+        <div class="form__group">
+          <label for="order_price" class="form__sr">Order Price</label>
+          <input type="number" id="order_price" placeholder="Price">
+        </div>
+        <div class="form__group">
+          <label for="order_link" class="form__sr">Order Link</label>
+          <input type="text" id="order_link" placeholder="Order Link">
+        </div>
+        <div class="form__group">
+          <span class="amount">
+            <button type="button" class="amount__minus">
+              <i class="icon icon--minus"></i>
+            </button>
+            <span class="amount__value">1</span>
+            <button type="button" class="amount__plus">
+              <i class="icon icon--plus"></i>
+            </button>
+          </span>
+        </div>
+        <button type="submit" class="btn btn--primary">&plus; Add Menu</button>
+      </form>
+    </footer>
+  </body>
+</html>
