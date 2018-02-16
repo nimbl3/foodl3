@@ -1,6 +1,6 @@
 <template>
   <div class="screen event-detail">
-    <app-header></app-header>
+    <app-header :current-user="currentUser"></app-header>
     <h2>{{event.name}}</h2>
     <dl>
       <dt>Detail</dt>

@@ -22,10 +22,13 @@ module.exports.default = (router) => {
 
       let user = responseBody.user;
       let team = responseBody.team;
+      user.imageUrl = user.image_512;
+
       // Set user session
       req.session.token = responseBody.access_token;
       req.session.user = user;
       req.session.team = team;
+
       // Save user info
       req.app.db.collection('users').doc(user.id).set({
         name: user.name,

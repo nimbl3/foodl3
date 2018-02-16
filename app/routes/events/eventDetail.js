@@ -5,7 +5,8 @@ module.exports.default = (router) => {
     let data = {
       csrfToken: req.csrfToken(),
       eventId: req.params.id,
-      orders: []
+      orders: [],
+      currentUser: req.session.user
     };
 
     let getDetail = req.app.db.collection('events').doc(req.params.id).get();
@@ -50,7 +51,7 @@ module.exports.default = (router) => {
 function joinOrder(currentUser, eventRef, orderRef) {
   let user = {
     name: currentUser.name,
-    avatar: currentUser.image_512
+    imageUrl: currentUser.imageUrl
   };
 
   let addUserToOrder = eventRef.collection('users').add(user);
