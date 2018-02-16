@@ -605,6 +605,40 @@ a {
   height: 1.08333em;
 }
 
+.amount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1rem;
+}
+
+.amount__minus {
+  width: 1.375em;
+  height: 1.375em;
+}
+
+.amount__plus {
+  width: 1.375em;
+  height: 1.375em;
+  font-size: 1.125em;
+  font-family: "Brix Sans Medium";
+  line-height: 1.22222;
+}
+
+.amount__value {
+  margin: 0 1.1875em;
+}
+
+.amount .icon {
+  width: 100%;
+  height: 100%;
+  margin-top: -0.1875em;
+  background-size: 50%;
+}
+
 .avatar {
   width: 2.25em;
   height: 2.25em;
@@ -652,12 +686,26 @@ a {
   font-size: 1rem;
 }
 
+.event-list__date {
+  display: block;
+  line-height: 1.1875;
+}
+
 .event-list__divider {
   border-bottom: 1px solid #f1f1f1;
 }
 
 .event-list__header {
   padding-bottom: 2.21429em;
+}
+
+.event-list__notice {
+  display: block;
+  margin-top: 0.64286em;
+  color: #ff4b4b;
+  font-size: 0.875em;
+  font-weight: normal;
+  line-height: 1.21429;
 }
 
 .event-list__order {
@@ -672,17 +720,18 @@ a {
   text-decoration: underline;
 }
 
-.event-list__date {
+.event-list__order-name {
   display: block;
-  line-height: 1.1875;
+  font-size: 1.125em;
+  font-family: "Brix Sans Medium";
+  line-height: 1.22222;
 }
 
-.event-list__notice {
+.event-list__order-price {
   display: block;
-  margin-top: 0.64286em;
-  color: #ff4b4b;
+  margin-top: 0.42857em;
   font-size: 0.875em;
-  font-weight: normal;
+  font-family: "Brix Sans Medium";
   line-height: 1.21429;
 }
 
@@ -744,6 +793,14 @@ a {
 
 .icon--delete {
   background-image: url("/assets/images/icon-delete.svg");
+}
+
+.icon--minus {
+  background-image: url("/assets/images/icon-minus.svg");
+}
+
+.icon--plus {
+  background-image: url("/assets/images/icon-plus.svg");
 }
 
 .authentication {

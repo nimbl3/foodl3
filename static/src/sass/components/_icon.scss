@@ -12,4 +12,12 @@
   &--delete {
     background-image: url(map-get($path, "image") + "/icon-delete.svg");
   }
+
+  &--minus {
+    background-image: url(map-get($path, "image") + "/icon-minus.svg");
+  }
+
+  &--plus {
+    background-image: url(map-get($path, "image") + "/icon-plus.svg");
+  }
 }
