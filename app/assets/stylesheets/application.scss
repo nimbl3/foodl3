@@ -7,12 +7,11 @@
 @import 'mixins/hide-text';
 
 // Base
-@import 'base/buttons';
 @import 'base/fonts';
 @import 'base/typography';
 // Layouts
 @import 'layouts/default';
 // Components
-@import 'components/login';
+@import 'components/authentication';
 // Screens
 @import 'screens/login';

@@ -2,7 +2,7 @@
   <div class="screen login">
     <section class="authentication">
       <h1 class="authentication__logo">Foodl3</h1>
-      <p class="authentication__taglines">Let’s eat together!</p>
+      <p class="authentication__tagline">Let’s eat together!</p>
 
       <a v-bind:href="loginUrl">
         <img class="authentication__with-slack"
