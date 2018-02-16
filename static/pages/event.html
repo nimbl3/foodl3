@@ -8,7 +8,7 @@
     <title>Foodl3 - Event</title>
     <link rel="stylesheet" href="/assets/stylesheets/application.css">
   </head>
-  <body>
+  <body class="screen-event">
     <!-- TopBar component -->
     <nav class="top-bar">
       <div class="top-bar__container">
@@ -29,220 +29,61 @@
       </div>
     </nav>
 
-    <!-- Event component: Event section -->
-    <section class="event">
-      <header class="event__header">
-        <h1 class="event__header-title">Event</h1>
-        <a href="/" class="btn btn--primary btn--large">&plus; Add event</a>
-      </header>
-      <table class="event-list">
-        <thead>
-          <tr class="event-list__divider">
-            <th class="event-list__header">Event Name</th>
-            <th class="event-list__header">Order Time</th>
-            <th class="event-list__header">Member</th>
-            <th class="event-list__header"></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="event-list__divider">
-            <td>
-              <a class="event-list__order" href="/">Pizza Party!</a>
-            </td>
-            <td>
-              <span class="event-list__date">20 NOV 2017, 12:00 PM</span>
-            </td>
-            <td>
-              <ul class="user-list">
-                <li class="user-list__item">
-                  <figure class="avatar">
-                    <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
-                  </figure>
-                </li>
-                <li class="user-list__item">
-                  <figure class="avatar">
-                    <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
-                  </figure>
-                </li>
-                <li class="user-list__item">
-                  <figure class="avatar">
-                    <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
-                  </figure>
-                </li>
-                <li class="user-list__item">
-                  <figure class="avatar">
-                    <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
-                  </figure>
-                </li>
-                <li class="user-list__item">
-                  <figure class="avatar">
-                    <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
-                  </figure>
-                </li>
-              </ul>
-            </td>
-            <td>
-              <ul class="action-list">
-                <li class="action-list__item">
-                    <a href="/" class="action-list__action">
-                      <i class="icon icon--edit"></i>
-                      <span class="action-list__label">Edit</span>
-                    </a>
-                </li>
-                <li class="action-list__item">
-                    <a href="/" class="action-list__action">
-                      <i class="icon icon--delete"></i>
-                      <span class="action-list__label">Delete</span>
-                    </a>
-                </li>
-              </ul>
-            </td>
-          </tr>
-          <tr class="event-list__divider">
-            <td>
-              <a class="event-list__order" href="/">Let’s eat fried chicken</a>
-            </td>
-            <td>
-              <span class="event-list__date">20 NOV 2017, 12:00 PM</span>
-            </td>
-            <td>
-              <ul class="user-list">
-                <li class="user-list__item">
-                  <figure class="avatar">
-                    <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
-                  </figure>
-                </li>
-                <li class="user-list__item">
-                  <figure class="avatar">
-                    <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
-                  </figure>
-                </li>
-                <li class="user-list__item">
-                  <figure class="avatar">
-                    <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
-                  </figure>
-                </li>
-              </ul>
-            </td>
-            <td>
-              <ul class="action-list">
-                <li class="action-list__item">
-                    <a href="/" class="action-list__action">
-                      <i class="icon icon--edit"></i>
-                      <span class="action-list__label">Edit</span>
-                    </a>
-                </li>
-                <li class="action-list__item">
-                    <a href="/" class="action-list__action">
-                      <i class="icon icon--delete"></i>
-                      <span class="action-list__label">Delete</span>
-                    </a>
-                </li>
-              </ul>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <!-- Event component: Past event section -->
-    <section class="event">
-      <header class="event__header">
-        <h1 class="event__header-title">Past Event</h1>
-      </header>
-      <table class="event-list">
-        <thead>
-          <tr class="event-list__divider">
-            <th class="event-list__header">Event Name</th>
-            <th class="event-list__header">Order Time</th>
-            <th class="event-list__header">Member</th>
-            <th class="event-list__header"></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="event-list__divider">
-            <td>
-              <a class="event-list__order" href="/">Pizza Party!</a>
-            </td>
-            <td>
-              <span class="event-list__date">20 NOV 2017, 12:00 PM</span>
-              <strong class="event-list__notice">* Event Closed</strong>
-            </td>
-            <td>
-              <ul class="user-list">
-                <li class="user-list__item">
-                  <figure class="avatar">
-                    <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
-                  </figure>
-                </li>
-                <li class="user-list__item">
-                  <figure class="avatar">
-                    <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
-                  </figure>
-                </li>
-                <li class="user-list__item">
-                  <figure class="avatar">
-                    <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
-                  </figure>
-                </li>
-                <li class="user-list__item">
-                  <figure class="avatar">
-                    <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
-                  </figure>
-                </li>
-                <li class="user-list__item">
-                  <figure class="avatar">
-                    <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
-                  </figure>
-                </li>
-              </ul>
-            </td>
-            <td>
-              <ul class="action-list">
-                <li class="action-list__item">
-                    <a href="/" class="action-list__action">
-                      <i class="icon icon--edit"></i>
-                      <span class="action-list__label">Edit</span>
-                    </a>
-                </li>
-                <li class="action-list__item">
-                    <a href="/" class="action-list__action">
-                      <i class="icon icon--delete"></i>
-                      <span class="action-list__label">Delete</span>
-                    </a>
-                </li>
-              </ul>
-            </td>
-          </tr>
-          <tr class="event-list__divider">
-            <td>
-              <a class="event-list__order" href="/">Who wants burger!</a>
-            </td>
-            <td>
-              <span class="event-list__date">20 NOV 2017, 12:00 PM</span>
-              <strong class="event-list__notice">* Event Closed</strong>
-            </td>
-            <td>
-              <ul class="user-list">
-                <li class="user-list__item">
-                  <figure class="avatar">
-                    <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
-                  </figure>
-                </li>
-                <li class="user-list__item">
-                  <figure class="avatar">
-                    <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
-                  </figure>
-                </li>
-                <li class="user-list__item">
-                  <figure class="avatar">
-                    <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
-                  </figure>
-                </li>
-              </ul>
-            </td>
-            <td>
-              <ul class="action-list">
+    <main>
+      <!-- Event component: Event section -->
+      <section class="event">
+        <header class="event__header">
+          <h1 class="event__header-title">Event</h1>
+          <a href="/" class="btn btn--primary btn--large">&plus; Add event</a>
+        </header>
+        <table class="event-list">
+          <thead>
+            <tr class="event-list__divider">
+              <th class="event-list__header">Event Name</th>
+              <th class="event-list__header">Order Time</th>
+              <th class="event-list__header">Member</th>
+              <th class="event-list__header"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="event-list__divider">
+              <td>
+                <a class="event-list__order" href="/">Pizza Party!</a>
+              </td>
+              <td>
+                <span class="event-list__date">20 NOV 2017, 12:00 PM</span>
+              </td>
+              <td>
+                <ul class="user-list">
+                  <li class="user-list__item">
+                    <figure class="avatar">
+                      <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+                    </figure>
+                  </li>
+                  <li class="user-list__item">
+                    <figure class="avatar">
+                      <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+                    </figure>
+                  </li>
+                  <li class="user-list__item">
+                    <figure class="avatar">
+                      <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+                    </figure>
+                  </li>
+                  <li class="user-list__item">
+                    <figure class="avatar">
+                      <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+                    </figure>
+                  </li>
+                  <li class="user-list__item">
+                    <figure class="avatar">
+                      <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+                    </figure>
+                  </li>
+                </ul>
+              </td>
+              <td>
+                <ul class="action-list">
                   <li class="action-list__item">
                       <a href="/" class="action-list__action">
                         <i class="icon icon--edit"></i>
@@ -256,11 +97,172 @@
                       </a>
                   </li>
                 </ul>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+              </td>
+            </tr>
+            <tr class="event-list__divider">
+              <td>
+                <a class="event-list__order" href="/">Let’s eat fried chicken</a>
+              </td>
+              <td>
+                <span class="event-list__date">20 NOV 2017, 12:00 PM</span>
+              </td>
+              <td>
+                <ul class="user-list">
+                  <li class="user-list__item">
+                    <figure class="avatar">
+                      <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+                    </figure>
+                  </li>
+                  <li class="user-list__item">
+                    <figure class="avatar">
+                      <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+                    </figure>
+                  </li>
+                  <li class="user-list__item">
+                    <figure class="avatar">
+                      <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+                    </figure>
+                  </li>
+                </ul>
+              </td>
+              <td>
+                <ul class="action-list">
+                  <li class="action-list__item">
+                      <a href="/" class="action-list__action">
+                        <i class="icon icon--edit"></i>
+                        <span class="action-list__label">Edit</span>
+                      </a>
+                  </li>
+                  <li class="action-list__item">
+                      <a href="/" class="action-list__action">
+                        <i class="icon icon--delete"></i>
+                        <span class="action-list__label">Delete</span>
+                      </a>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Event component: Past event section -->
+      <section class="event">
+        <header class="event__header">
+          <h1 class="event__header-title">Past Event</h1>
+        </header>
+        <table class="event-list">
+          <thead>
+            <tr class="event-list__divider">
+              <th class="event-list__header">Event Name</th>
+              <th class="event-list__header">Order Time</th>
+              <th class="event-list__header">Member</th>
+              <th class="event-list__header"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="event-list__divider">
+              <td>
+                <a class="event-list__order" href="/">Pizza Party!</a>
+              </td>
+              <td>
+                <span class="event-list__date">20 NOV 2017, 12:00 PM</span>
+                <strong class="event-list__notice">* Event Closed</strong>
+              </td>
+              <td>
+                <ul class="user-list">
+                  <li class="user-list__item">
+                    <figure class="avatar">
+                      <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+                    </figure>
+                  </li>
+                  <li class="user-list__item">
+                    <figure class="avatar">
+                      <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+                    </figure>
+                  </li>
+                  <li class="user-list__item">
+                    <figure class="avatar">
+                      <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+                    </figure>
+                  </li>
+                  <li class="user-list__item">
+                    <figure class="avatar">
+                      <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+                    </figure>
+                  </li>
+                  <li class="user-list__item">
+                    <figure class="avatar">
+                      <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+                    </figure>
+                  </li>
+                </ul>
+              </td>
+              <td>
+                <ul class="action-list">
+                  <li class="action-list__item">
+                      <a href="/" class="action-list__action">
+                        <i class="icon icon--edit"></i>
+                        <span class="action-list__label">Edit</span>
+                      </a>
+                  </li>
+                  <li class="action-list__item">
+                      <a href="/" class="action-list__action">
+                        <i class="icon icon--delete"></i>
+                        <span class="action-list__label">Delete</span>
+                      </a>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr class="event-list__divider">
+              <td>
+                <a class="event-list__order" href="/">Who wants burger!</a>
+              </td>
+              <td>
+                <span class="event-list__date">20 NOV 2017, 12:00 PM</span>
+                <strong class="event-list__notice">* Event Closed</strong>
+              </td>
+              <td>
+                <ul class="user-list">
+                  <li class="user-list__item">
+                    <figure class="avatar">
+                      <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+                    </figure>
+                  </li>
+                  <li class="user-list__item">
+                    <figure class="avatar">
+                      <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+                    </figure>
+                  </li>
+                  <li class="user-list__item">
+                    <figure class="avatar">
+                      <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+                    </figure>
+                  </li>
+                </ul>
+              </td>
+              <td>
+                <ul class="action-list">
+                    <li class="action-list__item">
+                        <a href="/" class="action-list__action">
+                          <i class="icon icon--edit"></i>
+                          <span class="action-list__label">Edit</span>
+                        </a>
+                    </li>
+                    <li class="action-list__item">
+                        <a href="/" class="action-list__action">
+                          <i class="icon icon--delete"></i>
+                          <span class="action-list__label">Delete</span>
+                        </a>
+                    </li>
+                  </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
 
   </body>
 </html>

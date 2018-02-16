@@ -517,7 +517,7 @@ a {
   height: 5.625em;
 }
 
-.layout-default .event {
+.layout-default main {
   width: 68.75em;
   max-width: 100%;
   margin-right: auto;
@@ -851,29 +851,33 @@ a {
   margin-left: 0.625em;
 }
 
-.event-detail .event {
+.screen-event-detail .event {
   -ms-flex-preferred-size: calc(100% - 25em);
       flex-basis: calc(100% - 25em);
   margin-top: 0;
 }
 
-.event-detail .event__header-title {
+.screen-event-detail .event__header-title {
   text-transform: capitalize;
 }
 
-.event-detail aside {
+.screen-event-detail aside {
   -ms-flex-preferred-size: 21.875em;
       flex-basis: 21.875em;
   margin-left: 3.125em;
   font-size: 1rem;
 }
 
-.event-detail .card:last-child {
+.screen-event-detail .card:last-child {
   margin-top: 1.25em;
   padding: 27px 25px;
 }
 
-.login > .authentication {
+.screen-event .event:first-child {
+  margin-top: 9.125em;
+}
+
+.screen-login > .authentication {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
