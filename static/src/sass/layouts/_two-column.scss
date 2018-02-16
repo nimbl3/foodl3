@@ -1,0 +1,22 @@
+.layout-two-column {
+  .top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: em(90px);
+  }
+
+  main {
+    display: flex;
+    justify-content: space-between;
+    width: em(1100px);
+    max-width: 100%;
+    margin: em(90px auto 0 auto);
+    font-size: 1rem;
+
+    > aside {
+      flex-basis: em(350px);
+    }
+  }
+}

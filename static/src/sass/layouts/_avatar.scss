@@ -1,0 +1,16 @@
+.avatar {
+  width: em(36px);
+  height: em(36px);
+  font-size: 1rem;
+
+  &--large {
+    width: em(46px);
+    height: em(46px);
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}

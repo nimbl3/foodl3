@@ -1,189 +1,241 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="layout-default">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foodl3 - Event</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-    <link rel="stylesheet" href="/assets/stylesheet/style.css">
+    <link rel="stylesheet" href="/assets/stylesheets/application.css">
   </head>
   <body>
-    <!-- Navigation bar -->
-    <nav class="navbar">
-      <div class="container">
-        <a href="#" class="navbar__logo"></a>
-        <div class="navbar__end">
-          <div class="navbar__user">
-            <span class="navbar__greetings">Hello, Natalie</span>
-            <span class="navbar__profile"></span>
-          </div>
-          <a href="#" class="navbar__logout"></a>
-        </div>
+    <!-- TopBar component -->
+    <nav class="top-bar">
+      <div class="top-bar__container">
+        <a class="top-bar__brand" href="/">Foodl3</a>
+        <ul class="top-bar__user">
+          <li>
+            <strong class="top-bar__greetings">Hello, Natalie</strong>
+          </li>
+          <li>
+            <figure class="avatar avatar--large">
+              <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+            </figure>
+          </li>
+          <li>
+            <a href="/" class="top-bar__logout">Log out</a>
+          </li>
+        </ul>
       </div>
     </nav>
 
-    <!-- Event Section -->
-    <section class="table-list">
-      <div class="container">
-        <header class="table-list__header">
-          <h1 class="table-list__title">Event</h1>
-          <button type="button" class="button button--primary button--large">&plus; Add Event</button>
-        </header>
-        <table class="table-list__table">
-            <thead>
-              <tr class="table-list__row">
-                <th class="table-list__head">Event Name</th>
-                <th class="table-list__head">Order Time</th>
-                <th class="table-list__head">Member</th>
-                <th class="table-list__head"></th>
-                <th class="table-list__head"></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="table-list__row">
-                <td class="table-list__column">Pizza Party!</td>
-                <td class="table-list__column">20 NOV 2017, 12:00 PM</td>
-                <td class="table-list__column">
-                  <ul class="table-list__member">
-                    <li class="table-list__member-item">
-                      <span class="table-list__member-profile"></span>
-                    </li>
-                    <li class="table-list__member-item">
-                      <span class="table-list__member-profile"></span>
-                    </li>
-                    <li class="table-list__member-item">
-                      <span class="table-list__member-profile"></span>
-                    </li>
-                    <li class="table-list__member-item">
-                      <span class="table-list__member-profile"></span>
-                    </li>
-                    <li class="table-list__member-item">
-                      <span class="table-list__member-profile">+2</span>
-                    </li>
-                  </ul>
-                </td>
-                <td class="table-list__column">
-                  <a href="#" class="button button-primary button--outlined">View</a>
-                </td>
-                <td class="table-list__column">
-                  <button type="button" class="button button--options">
-                    <i class="icon icon--options"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr class="table-list__row">
-                  <td class="table-list__column">Let’s eat fried chicken</td>
-                  <td class="table-list__column">20 NOV 2017, 12:00 PM</td>
-                  <td class="table-list__column">
-                    <ul class="table-list__member">
-                      <li class="table-list__member-item">
-                        <span class="table-list__member-profile"></span>
-                      </li>
-                      <li class="table-list__member-item">
-                        <span class="table-list__member-profile"></span>
-                      </li>
-                      <li class="table-list__member-item">
-                        <span class="table-list__member-profile"></span>
-                      </li>
-                    </ul>
-                  </td>
-                  <td class="table-list__column">
-                    <a href="#" class="button button-primary button--outlined">View</a>
-                  </td>
-                  <td class="table-list__column">
-                    <button type="button" class="button button--options">
-                      <i class="icon icon--options"></i>
-                    </button>
-                  </td>
-                </tr>
-            </tbody>
-          </table>
-      </div>
+    <!-- Event component: Event section -->
+    <section class="event">
+      <header class="event__header">
+        <h1 class="event__header-title">Event</h1>
+        <a href="/" class="btn btn--primary btn--large">&plus; Add event</a>
+      </header>
+      <table class="event-list">
+        <thead>
+          <tr class="event-list__divider">
+            <th class="event-list__header">Event Name</th>
+            <th class="event-list__header">Order Time</th>
+            <th class="event-list__header">Member</th>
+            <th class="event-list__header"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="event-list__divider">
+            <td>
+              <a class="event-list__order" href="/">Pizza Party!</a>
+            </td>
+            <td>
+              <span class="event-list__date">20 NOV 2017, 12:00 PM</span>
+            </td>
+            <td>
+              <ul class="user-list">
+                <li class="user-list__item">
+                  <figure class="avatar">
+                    <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+                  </figure>
+                </li>
+                <li class="user-list__item">
+                  <figure class="avatar">
+                    <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+                  </figure>
+                </li>
+                <li class="user-list__item">
+                  <figure class="avatar">
+                    <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+                  </figure>
+                </li>
+                <li class="user-list__item">
+                  <figure class="avatar">
+                    <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+                  </figure>
+                </li>
+                <li class="user-list__item">
+                  <figure class="avatar">
+                    <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+                  </figure>
+                </li>
+              </ul>
+            </td>
+            <td>
+              <a href="/" class="event-list__action">
+                <i class="icon icon--edit"></i>
+                <span>Edit</span>
+              </a>
+              <a href="/" class="event-list__action">
+                <i class="icon icon--delete"></i>
+                <span>Delete</span>
+              </a>
+            </td>
+          </tr>
+          <tr class="event-list__divider">
+            <td>
+              <a class="event-list__order" href="/">Let’s eat fried chicken</a>
+            </td>
+            <td>
+              <span class="event-list__date">20 NOV 2017, 12:00 PM</span>
+            </td>
+            <td>
+              <ul class="user-list">
+                <li class="user-list__item">
+                  <figure class="avatar">
+                    <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+                  </figure>
+                </li>
+                <li class="user-list__item">
+                  <figure class="avatar">
+                    <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+                  </figure>
+                </li>
+                <li class="user-list__item">
+                  <figure class="avatar">
+                    <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+                  </figure>
+                </li>
+              </ul>
+            </td>
+            <td>
+              <a href="/" class="event-list__action">
+                <i class="icon icon--edit"></i>
+                <span>Edit</span>
+              </a>
+              <a href="/" class="event-list__action">
+                <i class="icon icon--delete"></i>
+                <span>Delete</span>
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </section>
 
-    <!-- Past Event -->
-    <section class="table-list">
-        <div class="container">
-          <header class="table-list__header">
-            <h1 class="table-list__title">Past Event</h1>
-          </header>
-          <table class="table-list__table">
-              <thead>
-                <tr class="table-list__row">
-                  <th class="table-list__head">Event Name</th>
-                  <th class="table-list__head">Order Time</th>
-                  <th class="table-list__head">Member</th>
-                  <th class="table-list__head"></th>
-                  <th class="table-list__head"></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="table-list__row">
-                  <td class="table-list__column">Pizza Party!</td>
-                  <td class="table-list__column">
-                      18 NOV 2017, 12:00 PM
-                      <strong class="table-list__event-closed">* Event Closed</strong>
-                  </td>
-                  <td class="table-list__column">
-                    <ul class="table-list__member">
-                      <li class="table-list__member-item">
-                        <span class="table-list__member-profile"></span>
-                      </li>
-                      <li class="table-list__member-item">
-                        <span class="table-list__member-profile"></span>
-                      </li>
-                      <li class="table-list__member-item">
-                        <span class="table-list__member-profile"></span>
-                      </li>
-                      <li class="table-list__member-item">
-                        <span class="table-list__member-profile"></span>
-                      </li>
-                      <li class="table-list__member-item">
-                        <span class="table-list__member-profile">+2</span>
-                      </li>
-                    </ul>
-                  </td>
-                  <td class="table-list__column">
-                    <a href="#" class="button button-primary button--outlined">View</a>
-                  </td>
-                  <td class="table-list__column">
-                    <button type="button" class="button button--options">
-                      <i class="icon icon--options"></i>
-                    </button>
-                  </td>
-                </tr>
-                <tr class="table-list__row">
-                    <td class="table-list__column">Who wants burger!</td>
-                    <td class="table-list__column">
-                        18 NOV 2017, 12:00 PM
-                        <strong class="table-list__event-closed">* Event Closed</strong>
-                    </td>
-                    <td class="table-list__column">
-                      <ul class="table-list__member">
-                        <li class="table-list__member-item">
-                          <span class="table-list__member-profile"></span>
-                        </li>
-                        <li class="table-list__member-item">
-                          <span class="table-list__member-profile"></span>
-                        </li>
-                        <li class="table-list__member-item">
-                          <span class="table-list__member-profile"></span>
-                        </li>
-                      </ul>
-                    </td>
-                    <td class="table-list__column">
-                      <a href="#" class="button button-primary button--outlined">View</a>
-                    </td>
-                    <td class="table-list__column">
-                      <button type="button" class="button button--options">
-                        <i class="icon icon--options"></i>
-                      </button>
-                    </td>
-                  </tr>
-              </tbody>
-            </table>
-        </div>
-      </section>
+    <!-- Event component: Past event section -->
+    <section class="event">
+      <header class="event__header">
+        <h1 class="event__header-title">Past Event</h1>
+      </header>
+      <table class="event-list">
+        <thead>
+          <tr class="event-list__divider">
+            <th class="event-list__header">Event Name</th>
+            <th class="event-list__header">Order Time</th>
+            <th class="event-list__header">Member</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="event-list__divider">
+            <td>
+              <a class="event-list__order" href="/">Pizza Party!</a>
+            </td>
+            <td>
+              <span class="event-list__date">20 NOV 2017, 12:00 PM</span>
+              <strong class="event-list__notice">* Event Closed</strong>
+            </td>
+            <td>
+              <ul class="user-list">
+                <li class="user-list__item">
+                  <figure class="avatar">
+                    <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+                  </figure>
+                </li>
+                <li class="user-list__item">
+                  <figure class="avatar">
+                    <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+                  </figure>
+                </li>
+                <li class="user-list__item">
+                  <figure class="avatar">
+                    <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+                  </figure>
+                </li>
+                <li class="user-list__item">
+                  <figure class="avatar">
+                    <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+                  </figure>
+                </li>
+                <li class="user-list__item">
+                  <figure class="avatar">
+                    <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+                  </figure>
+                </li>
+              </ul>
+            </td>
+            <td>
+              <a href="/" class="event-list__action">
+                <i class="icon icon--edit"></i>
+                <span>Edit</span>
+              </a>
+              <a href="/" class="event-list__action">
+                <i class="icon icon--delete"></i>
+                <span>Delete</span>
+              </a>
+            </td>
+          </tr>
+          <tr class="event-list__divider">
+            <td>
+              <a class="event-list__order" href="/">Who wants burger!</a>
+            </td>
+            <td>
+              <span class="event-list__date">20 NOV 2017, 12:00 PM</span>
+              <strong class="event-list__notice">* Event Closed</strong>
+            </td>
+            <td>
+              <ul class="user-list">
+                <li class="user-list__item">
+                  <figure class="avatar">
+                    <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+                  </figure>
+                </li>
+                <li class="user-list__item">
+                  <figure class="avatar">
+                    <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+                  </figure>
+                </li>
+                <li class="user-list__item">
+                  <figure class="avatar">
+                    <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+                  </figure>
+                </li>
+              </ul>
+            </td>
+            <td>
+              <a href="/" class="event-list__action">
+                <i class="icon icon--edit"></i>
+                <span>Edit</span>
+              </a>
+              <a href="/" class="event-list__action">
+                <i class="icon icon--delete"></i>
+                <span>Delete</span>
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
   </body>
 </html>

@@ -1,0 +1,17 @@
+.event {
+  margin-top: em(101px);
+  font-size: 1rem;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__header-title {
+    font-size: em(36px);
+    font-family: map-get($font, 'bolder');
+    line-height: strip-unit(44px / 36px);
+    text-transform: uppercase;
+  }
+}

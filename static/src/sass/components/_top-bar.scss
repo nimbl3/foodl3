@@ -1,0 +1,53 @@
+.top-bar {
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.07);
+  font-size: 1rem;
+  background-color: map-get($brand-white, 'primary');
+  z-index: 1;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: em(1100px);
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  &__brand {
+    @include hide-text;
+
+    width: em(110px);
+    height: em(28.32px);
+    background: url(map-get($path, 'image') + "/logo.png") no-repeat center;
+    background-size: contain;
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+  }
+
+  &__greetings {
+    font-size: 1em;
+    font-family: map-get($font, "medium");
+    font-weight: normal;
+    line-height: strip-unit(19px / 16px);
+  }
+
+  &__logout {
+    @include hide-text;
+
+    display: block;
+    width: em(16px);
+    height: em(16px);
+    margin-left: em(19px);
+    background: url(map-get($path, 'image') + "/icon-logout.svg") no-repeat center;
+    background-size: contain;
+  }
+
+  .avatar {
+    padding-right: em(22px);
+    padding-left: em(22px);
+    border-right: 1px solid map-get($brand-white, 'light');
+  }
+}
