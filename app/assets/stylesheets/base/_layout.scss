@@ -1,0 +1,15 @@
+html {
+  box-sizing: border-box;
+}
+
+*:not(hr),
+*:not(hr)::before,
+*:not(hr)::after {
+  box-sizing: inherit;
+}
+
+body {
+  color: map-get($brand-gray, 'primary');
+  font-family: map-get($font, 'regular');
+  line-height: 1;
+}

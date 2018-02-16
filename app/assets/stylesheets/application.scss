@@ -9,9 +9,17 @@
 // Base
 @import 'base/fonts';
 @import 'base/typography';
+@import 'base/layout';
+@import 'base/list';
+@import 'base/media';
+@import 'base/buttons';
+@import 'base/forms';
+@import 'base/table';
 // Layouts
 @import 'layouts/default';
 // Components
 @import 'components/authentication';
+@import 'components/avatar';
+@import 'components/top-bar';
 // Screens
 @import 'screens/login';

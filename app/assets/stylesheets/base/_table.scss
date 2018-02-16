@@ -1,0 +1,20 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-color: map-get($brand-white, 'light');
+}
+
+th {
+  font-size: rem(14px);
+  font-family: map-get($font, 'bold');
+  font-weight: normal;
+  line-height: 14px / $base-font-size;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+td {
+  height: em(100px);
+  line-height: 19px / $base-font-size;
+}

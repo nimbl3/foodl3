@@ -1,0 +1,41 @@
+label {
+  display: block;
+  font-size: rem(14px);
+  font-family: map-get($font, 'bold');
+  line-height: 17px / 14px;
+  text-transform: uppercase;
+}
+
+[type='color'],
+[type='date'],
+[type='datetime'],
+[type='datetime-local'],
+[type='email'],
+[type='month'],
+[type='number'],
+[type='password'],
+[type='search'],
+[type='tel'],
+[type='text'],
+[type='time'],
+[type='url'],
+[type='week'],
+input:not([type]),
+textarea {
+  display: block;
+  border: 1px solid map-get($brand-white, 'light');
+  border-radius: 2px;
+  box-sizing: border-box;
+  padding: em(7px 16px 10px 16px);
+  color: map-get($brand-gray, 'primary');
+  font-size: 1rem;
+  line-height: 28px / $base-font-size;
+
+  &:focus {
+    outline-color: map-get($brand-orange, 'primary');
+  }
+
+  &:active {
+    border-color: map-get($brand-orange, 'primary');
+  }
+}
