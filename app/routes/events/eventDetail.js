@@ -51,7 +51,7 @@ module.exports.default = (router) => {
 function joinOrder(currentUser, eventRef, orderRef) {
   let user = {
     name: currentUser.name,
-    avatar: currentUser.avatar
+    imageUrl: currentUser.imageUrl
   };
 
   let addUserToOrder = eventRef.collection('users').add(user);
