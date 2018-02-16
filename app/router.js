@@ -56,6 +56,12 @@ module.exports.init = (app, config) => {
         ],
         title: 'Foodl3'
       }
+    },
+    layout: {
+      html: {
+        start: '<!DOCTYPE html><html class="layout-default">',
+        end: '</html>'
+      },
     }
   };
   const expressVueMiddleware = expressVue.init(vueOptions);
