@@ -50,8 +50,6 @@ module.exports.init = (app, config) => {
       head: {
         meta: [{
           script: vueScript
-        }, {
-          style: 'assets/rendered/style.css'
         }],
         title: 'Foodl3'
       }
