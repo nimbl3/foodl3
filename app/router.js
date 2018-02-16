@@ -48,9 +48,11 @@ module.exports.init = (app, config) => {
     rootPath: path.join(__dirname, 'components'),
     vue: {
       head: {
-        meta: [{
-          script: vueScript
-        }],
+        meta: [
+          { charset: 'UTF-8'},
+          { name: 'viewport', content: 'width=device-width, user-scalable=no, initial-scale=1' },
+          { script: vueScript }
+        ],
         title: 'Foodl3'
       }
     }
