@@ -18,8 +18,12 @@
 // Layouts
 @import 'layouts/default';
 // Components
-@import 'components/authentication';
+@import 'components/btn';
+@import 'components/icon';
 @import 'components/avatar';
 @import 'components/top-bar';
+@import 'components/authentication';
+@import 'components/event';
+@import 'components/event-list';
 // Screens
 @import 'screens/login';
