@@ -870,6 +870,56 @@ a {
   margin-top: 4.4375em;
 }
 
+.table-summary {
+  font-size: 1rem;
+}
+
+.table-summary__title {
+  margin-bottom: 0.45em;
+  font-size: 1.25em;
+  font-family: "Brix Sans Black";
+  line-height: 1.25;
+  text-align: left;
+}
+
+.table-summary__column {
+  height: auto;
+  padding-top: 1.38889em;
+  padding-bottom: 0;
+  font-size: 1.125em;
+  font-family: "Brix Sans Medium";
+  font-weight: normal;
+  line-height: 1.22222;
+  vertical-align: top;
+}
+
+.table-summary__column:last-child {
+  font-family: "Brix Sans Black";
+}
+
+.table-summary__total, .table-summary__fee {
+  display: block;
+}
+
+.table-summary__total {
+  font-size: 1.25em;
+  font-family: "Brix Sans Black";
+  font-weight: normal;
+  line-height: 1.25;
+}
+
+.table-summary__fee {
+  margin-top: 0.57143em;
+  color: #161616;
+  font-size: 0.875em;
+  font-family: "Brix Sans";
+  line-height: 1.21429;
+}
+
+.table-summary tr:only-child > .table-summary__column {
+  padding-top: 0;
+}
+
 .top-bar {
   -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.07);
           box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.07);
