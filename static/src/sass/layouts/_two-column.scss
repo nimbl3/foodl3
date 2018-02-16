@@ -9,14 +9,20 @@
 
   main {
     display: flex;
-    justify-content: space-between;
-    width: em(1100px);
+    width: 1100px;
     max-width: 100%;
-    margin: em(90px auto 0 auto);
+    margin: em(90px + 62px) auto 0 auto;
     font-size: 1rem;
+  }
 
-    > aside {
-      flex-basis: em(350px);
-    }
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: em(100px);
+    box-shadow: 0 -1px 2px 0 rgba(0, 0, 0, 0.07);
+    font-size: 1rem;
+    z-index: 1;
   }
 }
