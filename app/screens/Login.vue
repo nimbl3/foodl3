@@ -1,5 +1,5 @@
 <template>
-  <div class="screen login">
+  <div class="screen-login">
     <section class="authentication">
       <h1 class="authentication__logo">Foodl3</h1>
       <p class="authentication__tagline">Let’s eat together!</p>
