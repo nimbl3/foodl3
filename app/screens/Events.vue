@@ -2,30 +2,17 @@
   <div class="screen-event">
     <app-header :current-user="currentUser"></app-header>
     <main>
-      <form style="display: none" action="/event" method="post">
-        <input type="hidden" name="_csrf" :value="csrfToken">
-        <div>
-          <label>Name</label>
-          <input type="text" name="name" placeholder="Event Name" required>
-        </div>
-        <div>
-          <label>Order time</label>
-          <input type="datetime-local" name="end_date" required>
-        </div>
-        <div>
-          <label>Details</label>
-          <textarea name="description" placeholder="Event Details"></textarea>
-        </div>
-        <button type="submit">Add</button>
-      </form>
-
       <section class="event">
         <header class="event__header">
           <h1 class="event__header-title">Event</h1>
-          <a href="/" class="btn btn--primary btn--large">&plus; Add event</a>
+          <button type="button" class="btn btn--primary btn--large" @click="showAddModal = true">&plus; Add event</button>
         </header>
         <event-list :events="events"></event-list>
       </section>
+
+      <modal v-if="showAddModal" @close="showAddModal = false">
+        <event-form slot="body" :token="csrfToken"></event-form>
+      </modal>
     </main>
   </div>
 </template>
@@ -33,14 +20,18 @@
 <script>
   import appHeader from './layouts/AppHeader.vue';
   import eventList from './EventList.vue';
+  import eventForm from './EventForm.vue';
+  import modal from './Modal.vue';
 
   export default {
     data: function () {
-      return {};
+      return { showAddModal: false };
     },
     components: {
       appHeader,
-      eventList
+      eventList,
+      eventForm,
+      modal
     }
   };
 </script>

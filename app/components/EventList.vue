@@ -36,11 +36,13 @@
 
 <script>
   import userList from './UserList.vue';
+  import eventForm from './EventForm.vue';
 
   export default {
     props: ['events'],
     components: {
-      userList
+      userList,
+      eventForm
     },
     created() {
       console.log(this.events);
