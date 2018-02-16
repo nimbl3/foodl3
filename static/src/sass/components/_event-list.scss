@@ -37,19 +37,4 @@
     font-weight: normal;
     line-height: (17px / 14px);
   }
-
-  &__action {
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: em(34.5px, 12px);
-    color: map-get($brand-gray, 'primary');
-    font-size: em(12px);
-    font-family: map-get($font, 'medium');
-    line-height: (15px / 12px);
-    text-decoration: none;
-
-    > .icon {
-      margin-right: em(11.5px, 12px);
-    }
-  }
 }

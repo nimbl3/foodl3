@@ -509,23 +509,6 @@ a {
   color: #ffbc27;
 }
 
-.avatar {
-  width: 2.25em;
-  height: 2.25em;
-  font-size: 1rem;
-}
-
-.avatar--large {
-  width: 2.875em;
-  height: 2.875em;
-}
-
-.avatar__image {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
 .layout-default .top-bar {
   position: fixed;
   top: 0;
@@ -575,7 +558,68 @@ a {
   -webkit-box-shadow: 0 -1px 2px 0 rgba(0, 0, 0, 0.07);
           box-shadow: 0 -1px 2px 0 rgba(0, 0, 0, 0.07);
   font-size: 1rem;
+  background-color: #fff;
   z-index: 1;
+}
+
+.action-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1rem;
+}
+
+.action-list__item {
+  margin-left: 2.125em;
+}
+
+.action-list__item:first-child {
+  margin-left: 0;
+}
+
+.action-list__action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  color: #191919;
+  font-size: 0.75em;
+  text-decoration: none;
+}
+
+.action-list__label {
+  margin-left: 0.91667em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 1em;
+  line-height: 1.25;
+}
+
+.action-list .icon--edit, .action-list .icon--delete {
+  width: 1.08333em;
+  height: 1.08333em;
+}
+
+.avatar {
+  width: 2.25em;
+  height: 2.25em;
+  font-size: 1rem;
+}
+
+.avatar--large {
+  width: 2.875em;
+  height: 2.875em;
+}
+
+.avatar__image {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .btn {
@@ -642,21 +686,6 @@ a {
   line-height: 1.21429;
 }
 
-.event-list__action {
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 2.875em;
-  color: #191919;
-  font-size: 0.75em;
-  font-family: "Brix Sans Medium";
-  line-height: 1.25;
-  text-decoration: none;
-}
-
-.event-list__action > .icon {
-  margin-right: 0.95833em;
-}
-
 .event {
   margin-top: 6.3125em;
   font-size: 1rem;
@@ -683,27 +712,37 @@ a {
 
 .event__body {
   margin-top: 1.375em;
-  font-size: 1em;
   line-height: 1.75;
+}
+
+.event__action-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 2em;
+  border-bottom: 1px solid #f1f1f1;
+  padding-bottom: 1.35714em;
+  font-size: 0.875em;
+  line-height: 1.21429;
 }
 
 .icon {
   display: inline-block;
   vertical-align: baseline;
-  font-size: 1rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background: no-repeat center;
   background-size: contain;
 }
 
 .icon--edit {
-  width: 0.9375em;
-  height: 0.9375em;
   background-image: url("/assets/images/icon-edit.svg");
 }
 
 .icon--delete {
-  width: 0.9375em;
-  height: 0.9375em;
   background-image: url("/assets/images/icon-delete.svg");
 }
 
