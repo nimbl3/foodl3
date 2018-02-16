@@ -1,0 +1,32 @@
+.amount {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+
+  // TODO: Show the minus and plus icon when the component is fullly implemented
+  &__minus {
+    display: none;
+    width: em(22px);
+    height: em(22px);
+  }
+
+  &__plus {
+    display: none;
+    width: em(22px);
+    height: em(22px);
+    font-size: em(18px);
+    font-family: map-get($font, 'medium');
+    line-height: (22px / 18px);
+  }
+
+  &__value {
+    margin: 0 em(19px);
+  }
+
+  .icon {
+    width: 100%;
+    height: 100%;
+    margin-top: em(-3px);
+    background-size: 50%;
+  }
+}
