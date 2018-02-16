@@ -402,42 +402,55 @@ textarea {
   line-height: 1.75;
 }
 
-[type='color']:focus,
+[type='color']:focus, [type='color']:active,
 [type='date']:focus,
-[type='datetime']:focus,
-[type='datetime-local']:focus,
-[type='email']:focus,
-[type='month']:focus,
-[type='number']:focus,
-[type='password']:focus,
-[type='search']:focus,
-[type='tel']:focus,
-[type='text']:focus,
-[type='time']:focus,
-[type='url']:focus,
-[type='week']:focus,
-input:not([type]):focus,
-textarea:focus {
-  outline-color: #ffbc27;
-}
-
-[type='color']:active,
 [type='date']:active,
+[type='datetime']:focus,
 [type='datetime']:active,
+[type='datetime-local']:focus,
 [type='datetime-local']:active,
+[type='email']:focus,
 [type='email']:active,
+[type='month']:focus,
 [type='month']:active,
+[type='number']:focus,
 [type='number']:active,
+[type='password']:focus,
 [type='password']:active,
+[type='search']:focus,
 [type='search']:active,
+[type='tel']:focus,
 [type='tel']:active,
+[type='text']:focus,
 [type='text']:active,
+[type='time']:focus,
 [type='time']:active,
+[type='url']:focus,
 [type='url']:active,
+[type='week']:focus,
 [type='week']:active,
+input:not([type]):focus,
 input:not([type]):active,
+textarea:focus,
 textarea:active {
   border-color: #ffbc27;
+  outline: none;
+}
+
+::-webkit-input-placeholder {
+  color: #cccccc;
+}
+
+:-moz-placeholder {
+  color: #cccccc;
+}
+
+::-moz-placeholder {
+  color: #cccccc;
+}
+
+:-ms-input-placeholder {
+  color: #cccccc;
 }
 
 html {
@@ -658,6 +671,7 @@ a {
 
 .btn {
   border-radius: 30px;
+  padding: 1em 1.85714em;
   font-size: 0.875rem;
   font-family: "Brix Sans Bold";
   line-height: 1.21429;
@@ -776,6 +790,32 @@ a {
   padding-bottom: 1.35714em;
   font-size: 0.875em;
   line-height: 1.21429;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.form--inline {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form__sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
 }
 
 .icon {
@@ -928,6 +968,22 @@ a {
 .screen-event-detail .card:last-child {
   margin-top: 1.25em;
   padding: 27px 25px;
+}
+
+.screen-event-detail .form {
+  width: 1100px;
+  max-width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.screen-event-detail .form #order_name,
+.screen-event-detail .form #order_link {
+  width: 18.75em;
+}
+
+.screen-event-detail .form #order_price {
+  width: 9.375em;
 }
 
 .screen-event .event:first-child {

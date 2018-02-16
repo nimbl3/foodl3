@@ -31,11 +31,13 @@ textarea {
   font-size: 1rem;
   line-height: strip-unit(28px / $base-font-size);
 
-  &:focus {
-    outline-color: map-get($brand-orange, 'primary');
-  }
-
+  &:focus,
   &:active {
     border-color: map-get($brand-orange, 'primary');
+    outline: none;
   }
+}
+
+@include placeholder {
+  color: lighten(map-get($brand-gray, 'primary'), 70%);
 }
