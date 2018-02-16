@@ -31,12 +31,10 @@ gulp.task('clean', function () {
 
 gulp.task('sass', ['clean'], function () {
   return gulp.src(paths.scss)
-    .pipe(sourceMaps.init())
     .pipe(sass({
       outputStyle: 'compressed'
     }).on('error', sass.logError))
     .pipe(concat('style.css'))
-    .pipe(sourceMaps.write())
     .pipe(gulp.dest(paths.css))
     .pipe(livereload());
 });
