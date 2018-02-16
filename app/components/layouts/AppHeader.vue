@@ -12,6 +12,7 @@
 
 <script>
   import userAvatar from './UserAvatar.vue';
+
   export default {
     data: function () {
       return {};

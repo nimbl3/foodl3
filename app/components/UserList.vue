@@ -10,7 +10,7 @@
   import userAvatar from './UserAvatar.vue'
 
   export default {
-    props: ['users', 'maxUsers'],
+    props: ['users'],
     components: {
       userAvatar
     }
