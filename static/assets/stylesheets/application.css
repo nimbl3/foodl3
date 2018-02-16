@@ -557,6 +557,9 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 1100px;
   max-width: 100%;
   margin: 9.5em auto 0 auto;
@@ -676,6 +679,12 @@ a {
   font-family: "Brix Sans Black";
   line-height: 1.22222;
   text-transform: uppercase;
+}
+
+.event__body {
+  margin-top: 1.375em;
+  font-size: 1em;
+  line-height: 1.75;
 }
 
 .icon {
@@ -804,9 +813,8 @@ a {
 }
 
 .event-detail .event {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -ms-flex-preferred-size: calc(100% - 25em);
+      flex-basis: calc(100% - 25em);
   margin-top: 0;
 }
 
@@ -815,8 +823,10 @@ a {
 }
 
 .event-detail aside {
-  width: 21.875em;
+  -ms-flex-preferred-size: 21.875em;
+      flex-basis: 21.875em;
   margin-left: 3.125em;
+  font-size: 1rem;
 }
 
 .event-detail .card:last-child {

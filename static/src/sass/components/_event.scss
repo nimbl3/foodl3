@@ -14,4 +14,10 @@
     line-height: strip-unit(44px / 36px);
     text-transform: uppercase;
   }
+
+  &__body {
+    margin-top: em(22px);
+    font-size: 1em;
+    line-height: (28px / 16px);
+  }
 }
