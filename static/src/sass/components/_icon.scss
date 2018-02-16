@@ -1,0 +1,19 @@
+.icon {
+  display: inline-block;
+  vertical-align: baseline;
+  font-size: 1rem;
+  background: no-repeat center;
+  background-size: contain;
+
+  &--edit {
+    width: em(15px);
+    height: em(15px);
+    background-image: url(map-get($path, "image") + "/icon-edit.svg");
+  }
+
+  &--delete {
+    width: em(15px);
+    height: em(15px);
+    background-image: url(map-get($path, "image") + "/icon-delete.svg");
+  }
+}

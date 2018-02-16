@@ -1,0 +1,10 @@
+.user-list {
+  display: flex;
+  font-size: 1rem;
+
+  &__item {
+    &:not(:first-child) {
+      margin-left: em(10px);
+    }
+  }
+}

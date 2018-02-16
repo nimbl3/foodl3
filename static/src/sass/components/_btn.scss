@@ -1,0 +1,17 @@
+.btn {
+  border-radius: 30px;
+  font-size: rem(14px);
+  font-family: map-get($font, 'bold');
+  line-height: (17px / 14px);
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &--primary {
+    color: map-get($brand-white, 'primary');
+    background-color: map-get($brand-orange, 'primary');
+  }
+
+  &--large {
+    padding: em(18px 30px, 14px);
+  }
+}
