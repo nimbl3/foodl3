@@ -1,6 +1,7 @@
 .btn {
   border-radius: 30px;
   padding: em(14px 26px, 14px);
+  box-sizing: border-box;
   font-size: rem(14px);
   font-family: map-get($font, 'bold');
   line-height: (17px / 14px);

@@ -1,9 +1,39 @@
 .form {
   display: flex;
+  flex-direction: column;
+  font-size: 1rem;
 
   &--inline {
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
+  }
+
+  &__group {
+    margin-top: rem(30px);
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+
+  &--inline &__group {
+    margin-top: 0;
+  }
+
+  &__label {
+    font-size: em(14px);
+    line-height: (17px / 14px);
+  }
+
+  &__control {
+    width: 100%;
+    margin-top: rem(10px);
+    box-sizing: border-box;
+
+    &--textarea {
+      height: rem(130px);
+    }
   }
 
   &__sr {
