@@ -1,11 +1,11 @@
 .avatar {
-  width: em(36px);
-  height: em(36px);
+  width: rem(36px);
+  height: rem(36px);
   font-size: 1rem;
 
   &--large {
-    width: em(46px);
-    height: em(46px);
+    width: rem(46px);
+    height: rem(46px);
   }
 
   &__image {

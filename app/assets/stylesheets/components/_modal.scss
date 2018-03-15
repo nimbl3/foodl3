@@ -17,10 +17,10 @@
 }
 
 .modal-container {
-  width: 500px;
+  width: rem(500px);
   margin: 0 auto;
   border-radius: 4px;
-  padding: 20px 30px;
+  padding: rem(20px 30px);
   box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
   font-family: Helvetica, Arial, sans-serif;
   background-color: #fff;
@@ -38,7 +38,7 @@
 }
 
 .modal-body {
-  margin: 20px 0;
+  margin: rem(20px 0);
 }
 
 .modal-default-button {
@@ -69,6 +69,6 @@
 }
 
 .modal__close > img {
-  width: 10px;
-  height: 10px;
+  width: rem(10px);
+  height: rem(10px);
 }

@@ -4,7 +4,7 @@
 
   &__item {
     &:not(:first-child) {
-      margin-left: em(10px);
+      margin-left: rem(10px);
     }
   }
 }

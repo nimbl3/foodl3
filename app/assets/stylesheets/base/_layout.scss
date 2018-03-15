@@ -2,9 +2,9 @@ html {
   box-sizing: border-box;
 }
 
-*:not(hr),
-*:not(hr)::before,
-*:not(hr)::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 

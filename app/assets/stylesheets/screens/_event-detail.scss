@@ -1,6 +1,6 @@
 .screen-event-detail {
   .event {
-    flex-basis: calc(100% - #{em(350px + 50px)});
+    flex-basis: calc(100% - #{rem(350px + 50px)});
     margin-top: 0;
 
     &__header-title {
@@ -9,14 +9,14 @@
   }
 
   aside {
-    flex-basis: em(350px);
-    margin-left: em(50px);
+    flex-basis: rem(350px);
+    margin-left: rem(50px);
     font-size: 1rem;
   }
 
   .card:last-child {
-    margin-top: em(20px);
-    padding: (27px 25px);
+    margin-top: rem(20px);
+    padding: rem(27px 25px);
   }
 
   .form {
@@ -27,11 +27,11 @@
 
     #order_name,
     #order_link {
-      width: em(300px);
+      width: rem(300px);
     }
 
     #order_price {
-      width: em(150px);
+      width: rem(150px);
     }
   }
 }

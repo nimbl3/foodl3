@@ -1,6 +1,6 @@
 .btn {
   border-radius: 30px;
-  padding: em(14px 26px, 14px);
+  padding: rem(14px 26px);
   box-sizing: border-box;
   font-size: rem(14px);
   font-family: map-get($font, 'bold');
@@ -14,6 +14,6 @@
   }
 
   &--large {
-    padding: em(18px 30px, 14px);
+    padding: rem(18px 30px);
   }
 }

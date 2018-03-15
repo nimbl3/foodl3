@@ -2,7 +2,7 @@
   font-size: 1rem;
 
   &__title {
-    margin-bottom: em(9px, 20px);
+    margin-bottom: rem(9px);
     font-size: em(20px);
     font-family: map-get($font, 'bolder');
     line-height: (25px / 20px);
@@ -14,7 +14,7 @@
   }
 
   &__row:last-child > &__column {
-    padding-bottom: em(33px, 18px);
+    padding-bottom: rem(33px);
   }
 
   &__row:only-child > &__column {
@@ -24,7 +24,7 @@
 
   &__column {
     height: auto;
-    padding-top: em(25px, 18px);
+    padding-top: rem(25px);
     padding-bottom: 0;
     font-size: em(18px);
     font-family: map-get($font, 'medium');
@@ -50,7 +50,7 @@
   }
 
   &__fee {
-    margin-top: em(8px, 14px);
+    margin-top: rem(8px);
     color: map-get($brand-gray, 'light');
     font-size: em(14px);
     font-family: map-get($font, 'regular');

@@ -1,6 +1,6 @@
 .card {
   border: 1px solid map-get($brand-white, 'light');
   border-radius: 2px;
-  padding: em(32px 25px);
+  padding: rem(32px 25px);
   font-size: 1rem;
 }

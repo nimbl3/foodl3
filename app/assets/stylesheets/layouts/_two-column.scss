@@ -4,7 +4,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: em(90px);
+    height: rem(90px);
   }
 
   main {
@@ -12,7 +12,7 @@
     justify-content: space-between;
     width: 1100px;
     max-width: 100%;
-    margin: em(90px + 62px) auto 0 auto;
+    margin: rem((90px + 62px) auto 0 auto);
     font-size: 1rem;
   }
 
@@ -21,7 +21,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: em(100px);
+    height: rem(100px);
     box-shadow: 0 -1px 2px 0 rgba(0, 0, 0, 0.07);
     font-size: 1rem;
     background-color: map-get($brand-white, 'primary');

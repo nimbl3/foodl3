@@ -1,5 +1,5 @@
 .event {
-  margin-top: em(101px);
+  margin-top: rem(101px);
   font-size: 1rem;
 
   &__header {
@@ -11,21 +11,21 @@
   &__header-title {
     font-size: em(36px);
     font-family: map-get($font, 'bolder');
-    line-height: strip-unit(44px / 36px);
+    line-height: 44px / 36px;
     text-transform: uppercase;
   }
 
   &__body {
-    margin-top: em(22px);
+    margin-top: rem(22px);
     line-height: (28px / 16px);
   }
 
   &__action-bar {
     display: flex;
     justify-content: space-between;
-    margin-top: em(28px, 14px);
+    margin-top: rem(28px);
     border-bottom: 1px solid map-get($brand-white, 'light');
-    padding-bottom: em(19px, 14px);
+    padding-bottom: rem(19px);
     font-size: em(14px);
     line-height: (17px / 14px);
   }
