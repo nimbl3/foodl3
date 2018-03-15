@@ -882,6 +882,19 @@ a {
   text-align: left;
 }
 
+.table-summary__footer {
+  border-top: 1px solid #f1f1f1;
+}
+
+.table-summary__row:last-child > .table-summary__column {
+  padding-bottom: 1.83333em;
+}
+
+.table-summary__row:only-child > .table-summary__column {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .table-summary__column {
   height: auto;
   padding-top: 1.38889em;
@@ -914,10 +927,6 @@ a {
   font-size: 0.875em;
   font-family: "Brix Sans";
   line-height: 1.21429;
-}
-
-.table-summary tr:only-child > .table-summary__column {
-  padding-top: 0;
 }
 
 .top-bar {
@@ -966,7 +975,7 @@ a {
   font-size: 1em;
   font-family: "Brix Sans Medium";
   font-weight: normal;
-  line-height: 1.1875;
+  line-height: 19px / 16px;
 }
 
 .top-bar__logout {

@@ -13,3 +13,4 @@ debianpkg/
 geo.mmdb
 .DS_Store
 public
+.idea/

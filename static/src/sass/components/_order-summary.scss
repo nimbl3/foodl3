@@ -9,6 +9,19 @@
     text-align: left;
   }
 
+  &__footer {
+    border-top: 1px solid map-get($brand-white, 'light');
+  }
+
+  &__row:last-child > &__column {
+    padding-bottom: em(33px, 18px);
+  }
+
+  &__row:only-child > &__column {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
   &__column {
     height: auto;
     padding-top: em(25px, 18px);
@@ -42,9 +55,5 @@
     font-size: em(14px);
     font-family: map-get($font, 'regular');
     line-height: (17px / 14px);
-  }
-
-  tr:only-child > .table-summary__column {
-    padding-top: 0;
   }
 }
