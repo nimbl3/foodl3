@@ -25,7 +25,7 @@
 
   export default {
     data: function () {
-      return { showAddModal: true };
+      return { showAddModal: false };
     },
     components: {
       appHeader,
