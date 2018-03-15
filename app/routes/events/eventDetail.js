@@ -18,7 +18,14 @@ module.exports.default = (router) => {
         data.orders.push(Object.assign({ id: order.id }, order.data()));
       });
 
-      res.renderVue('../screens/eventDetail', data);
+      res.renderVue('../screens/eventDetail', data, {
+        layout: {
+          html: {
+            start: '<!DOCTYPE html><html class="layout-two-column">',
+            end: '</html>'
+          },
+        }
+      });
     });
   });
 
