@@ -1,4 +1,4 @@
-.layout-default {
+.layout-two-column {
   .top-bar {
     position: fixed;
     top: 0;
@@ -8,9 +8,12 @@
   }
 
   main {
-    width: em(1100px);
+    display: flex;
+    justify-content: space-between;
+    width: 1100px;
     max-width: 100%;
-    margin: em(90px + 56px) auto em(100px + 56px) auto;
+    margin: em(90px + 62px) auto 0 auto;
+    font-size: 1rem;
   }
 
   footer {

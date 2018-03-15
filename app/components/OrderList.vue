@@ -1,24 +1,40 @@
 <template>
-  <ul>
-    <li v-for="order in orders">
-      <div class="order-container">
-        <dl>
-          <dt>Name</dt>
-          <dd>{{order.name}}</dd>
-          <dt>Price</dt>
-          <dd>{{order.price}}</dd>
-          <dt>Link</dt>
-          <dd>{{order.link}}</dd>
-          <user-list :users="order.users"></user-list>
-          <form :action="`/order/${order.id}/join`" method="post">
-            <input type="hidden" name="_csrf" :value="token">
-            <input type="hidden" name="event_id" :value="event.id">
-            <button type="submit">Join</button>
-          </form>
-        </dl>
-      </div>
-    </li>
-  </ul>
+  <table class="order-list">
+    <thead>
+    <tr>
+      <th class="order-list__header">Order List</th>
+      <th class="order-list__header">Amount</th>
+      <th class="order-list__header">Link</th>
+      <th class="order-list__header">Joiner</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr v-for="order in orders" class="order-list__divider">
+      <td>
+        <span class="order-list__order-name">{{ order.name }}</span>
+        <span class="order-list__order-price">THB {{ order.price }}</span>
+      </td>
+      <td>
+      <!--TODO: Implement the amount component interaction -->
+      <span class="amount">
+        <button type="button" class="amount__minus">
+          <i class="icon icon--minus"></i>
+        </button>
+        <span class="amount__value">1</span>
+        <button type="button" class="amount__plus">
+          <i class="icon icon--plus"></i>
+        </button>
+      </span>
+      </td>
+      <td>
+        <a :href="order.link">{{ order.link }}</a>
+      </td>
+      <td>
+        <user-list :users="order.users"></user-list>
+      </td>
+    </tr>
+    </tbody>
+  </table>
 </template>
 
 <script>

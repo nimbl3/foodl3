@@ -39,3 +39,7 @@ textarea {
     border-color: map-get($brand-orange, 'primary');
   }
 }
+
+@include placeholder {
+  color: lighten(map-get($brand-gray, 'primary'), 70%);
+}

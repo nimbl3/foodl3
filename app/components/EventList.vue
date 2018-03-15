@@ -5,7 +5,7 @@
       <th class="event-list__header">Event Name</th>
       <th class="event-list__header">Order Time</th>
       <th class="event-list__header">Member</th>
-      <th class="event-list__header hidden"></th>
+      <th class="event-list__header"></th>
     </tr>
     </thead>
     <tbody>
@@ -19,15 +19,21 @@
         <td>
           <user-list :users=event.users></user-list>
         </td>
-        <td class="hidden">
-          <a href="/" class="event-list__action">
-            <i class="icon icon--edit"></i>
-            <span>Edit</span>
-          </a>
-          <a href="/" class="event-list__action">
-            <i class="icon icon--delete"></i>
-            <span>Delete</span>
-          </a>
+        <td>
+          <ul class="action-list">
+            <li class="action-list__item">
+              <a href="/" class="action-list__action">
+                <i class="icon icon--edit"></i>
+                <span class="action-list__label">Edit</span>
+              </a>
+            </li>
+            <li class="action-list__item">
+              <a href="/" class="action-list__action">
+                <i class="icon icon--delete"></i>
+                <span class="action-list__label">Delete</span>
+              </a>
+            </li>
+          </ul>
         </td>
       </tr>
     </tbody>

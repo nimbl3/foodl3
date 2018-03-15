@@ -1,0 +1,19 @@
+.form {
+  display: flex;
+
+  &--inline {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__sr {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+  }
+}

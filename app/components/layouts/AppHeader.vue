@@ -10,19 +10,10 @@
           <user-avatar :user="currentUser"></user-avatar>
         </li>
         <li>
-          <a href="/" class="top-bar__logout">Log out</a>
+          <a href="/logout" class="top-bar__logout">Log out</a>
         </li>
       </ul>
     </div>
-
-
-    <!--<a class="logo" href="/">-->
-      <!--<span class="text-hide">Foodl3</span>-->
-    <!--</a>-->
-    <!--<div>-->
-      <!--<span>Hello {{ currentUser.name }}</span>-->
-      <!--<user-avatar :user="currentUser"></user-avatar>-->
-    <!--<a href="/logout">Logout</a>-->
   </nav>
 </template>
 

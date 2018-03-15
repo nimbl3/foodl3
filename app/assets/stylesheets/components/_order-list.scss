@@ -1,0 +1,26 @@
+.order-list {
+  @extend .event-list;
+
+  &__divider {
+    @extend .event-list__divider;
+  }
+
+  &__header {
+    @extend .event-list__header;
+  }
+
+  &__order-name {
+    display: block;
+    font-size: em(18px);
+    font-family: map-get($font, 'medium');
+    line-height: (22px / 18px);
+  }
+
+  &__order-price {
+    display: block;
+    margin-top: em(6px, 14px);
+    font-size: em(14px);
+    font-family: map-get($font, 'medium');
+    line-height: (17px / 14px);
+  }
+}
