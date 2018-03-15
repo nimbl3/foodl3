@@ -1,17 +1,17 @@
 <template>
-  <form action="/event" method="post">
+  <form class="form" action="/event" method="post">
     <input type="hidden" name="_csrf" :value="token">
-    <div>
-      <label for="eventName">Name</label>
-      <input id="eventName" type="text" name="name" placeholder="Event Name" required>
+    <div class="form__group">
+      <label for="eventName" class="form__label">Name</label>
+      <input type="text" class="form__control" id="eventName" name="name" placeholder="Event Name" required>
     </div>
-    <div>
-      <label for="eventEndDate">Order time</label>
-      <input id="eventEndDate" type="datetime-local" name="end_date" required>
+    <div class="form__group">
+      <label for="eventEndDate" class="form__label">Order time</label>
+      <input type="datetime-local" class="form__control" id="eventEndDate" name="end_date" required>
     </div>
-    <div>
-      <label for="eventDescription">Details</label>
-      <textarea id="eventDescription" name="description" placeholder="Event Details"></textarea>
+    <div class="form__group">
+      <label for="eventDescription" class="form__label">Details</label>
+      <textarea id="eventDescription" class="form__control form__control--textarea" name="description" placeholder="Event Details"></textarea>
     </div>
     <button type="submit" class="btn btn--primary">Add</button>
   </form>

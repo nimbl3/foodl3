@@ -1,3 +1,14 @@
-@function rem($size) {
-  @return #{$size / 16px}rem;
+@function rem ($values, $base-font-size: $base-font-size) {
+  $list: ();
+
+  @each $value in $values {
+    @if ($value == 0 or $value == auto) {
+      $list: append($list, $value);
+    } @else {
+      $em-value: ($value / $base-font-size)+rem;
+      $list: append($list, $em-value);
+    }
+  }
+
+  @return $list;
 }

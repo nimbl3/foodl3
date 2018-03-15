@@ -4,7 +4,9 @@
     <div class="modal-wrapper">
       <div class="modal-container">
         <div class="modal-header">
-          <button class="modal__close" @click="$emit('close')">close</button>
+          <button class="modal__close" @click="$emit('close')">
+            <img src="/assets/images/icon-close.svg" alt="Close icon">
+          </button>
           <slot name="header"></slot>
         </div>
         <div class="modal-body">
