@@ -2,7 +2,7 @@ label {
   display: block;
   font-size: rem(14px);
   font-family: map-get($font, 'bold');
-  line-height: 17px / 14px;
+  line-height: strip-unit(17px / 14px);
   text-transform: uppercase;
 }
 
@@ -29,14 +29,12 @@ textarea {
   padding: em(7px 16px 10px 16px);
   color: map-get($brand-gray, 'primary');
   font-size: 1rem;
-  line-height: 28px / $base-font-size;
+  line-height: strip-unit(28px / $base-font-size);
 
-  &:focus {
-    outline-color: map-get($brand-orange, 'primary');
-  }
-
+  &:focus,
   &:active {
     border-color: map-get($brand-orange, 'primary');
+    outline: none;
   }
 }
 

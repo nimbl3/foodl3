@@ -52,6 +52,7 @@ module.exports.init = (app, config) => {
           { charset: 'UTF-8'},
           { name: 'viewport', content: 'width=device-width, user-scalable=no, initial-scale=1' },
           { script: vueScript },
+          { style: 'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css' },
           { style: '/assets/rendered/style.css' }
         ],
         title: 'Foodl3'

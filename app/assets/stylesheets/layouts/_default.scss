@@ -10,18 +10,15 @@
   main {
     width: em(1100px);
     max-width: 100%;
-    margin: em(90px + 56px) auto em(100px + 56px) auto;
+    margin-right: auto;
+    margin-left: auto;
   }
 
-  footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: em(100px);
-    box-shadow: 0 -1px 2px 0 rgba(0, 0, 0, 0.07);
-    font-size: 1rem;
-    background-color: map-get($brand-white, 'primary');
-    z-index: 1;
+  .event {
+
+
+    &:first-of-type {
+      margin-top: em(90px + 56px);
+    }
   }
 }

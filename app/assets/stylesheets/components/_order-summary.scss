@@ -1,0 +1,59 @@
+.table-summary {
+  font-size: 1rem;
+
+  &__title {
+    margin-bottom: em(9px, 20px);
+    font-size: em(20px);
+    font-family: map-get($font, 'bolder');
+    line-height: (25px / 20px);
+    text-align: left;
+  }
+
+  &__footer {
+    border-top: 1px solid map-get($brand-white, 'light');
+  }
+
+  &__row:last-child > &__column {
+    padding-bottom: em(33px, 18px);
+  }
+
+  &__row:only-child > &__column {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  &__column {
+    height: auto;
+    padding-top: em(25px, 18px);
+    padding-bottom: 0;
+    font-size: em(18px);
+    font-family: map-get($font, 'medium');
+    font-weight: normal;
+    line-height: (22px / 18px);
+    vertical-align: top;
+
+    &:last-child {
+      font-family: map-get($font, 'bolder');
+    }
+  }
+
+  &__total,
+  &__fee {
+    display: block;
+  }
+
+  &__total {
+    font-size: em(20px);
+    font-family: map-get($font, 'bolder');
+    font-weight: normal;
+    line-height: (25px / 20px);
+  }
+
+  &__fee {
+    margin-top: em(8px, 14px);
+    color: map-get($brand-gray, 'light');
+    font-size: em(14px);
+    font-family: map-get($font, 'regular');
+    line-height: (17px / 14px);
+  }
+}

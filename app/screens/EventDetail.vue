@@ -5,6 +5,33 @@
       <section class="event">
         <header class="event__header">
           <h1 class="event__header-title">{{ event.name }}</h1>
+          <ul class="user-list">
+            <li class="user-list__item">
+              <figure class="avatar">
+                <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+              </figure>
+            </li>
+            <li class="user-list__item">
+              <figure class="avatar">
+                <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+              </figure>
+            </li>
+            <li class="user-list__item">
+              <figure class="avatar">
+                <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+              </figure>
+            </li>
+            <li class="user-list__item">
+              <figure class="avatar">
+                <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+              </figure>
+            </li>
+            <li class="user-list__item">
+              <figure class="avatar">
+                <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
+              </figure>
+            </li>
+          </ul>
         </header>
         <section class="event__body">
           <p>{{ event.description }}</p>
@@ -28,19 +55,82 @@
         </section>
         <order-list :token="csrfToken" :event="event" :orders="orders"></order-list>
       </section>
-      <aside></aside>
+      <aside>
+        <section class="card">
+          <table class="table-summary">
+            <caption class="table-summary__title">Order Summary</caption>
+            <tfoot class="table-summary__footer">
+            <tr>
+              <td class="table-summary__column">
+                <strong class="table-summary__total">Total</strong>
+                <small class="table-summary__fee">* Exclude vat and delivery fee</small>
+              </td>
+              <td class="table-summary__column">THB 990</td>
+            </tr>
+            </tfoot>
+            <tbody>
+            <tr class="table-summary__row">
+              <td class="table-summary__column">Pepporoni x 1</td>
+              <td class="table-summary__column">THB 210</td>
+            </tr>
+            <tr class="table-summary__row">
+              <td class="table-summary__column">Garlic Bread x 1</td>
+              <td class="table-summary__column">THB 100</td>
+            </tr>
+            <tr class="table-summary__row">
+              <td class="table-summary__column">Hawaiian x 1</td>
+              <td class="table-summary__column">THB 210</td>
+            </tr>
+            <tr class="table-summary__row">
+              <td class="table-summary__column">Chicken Wings x 1</td>
+              <td class="table-summary__column">THB 100</td>
+            </tr>
+            <tr class="table-summary__row">
+              <td class="table-summary__column">CocaCola x 1</td>
+              <td class="table-summary__column">THB 60</td>
+            </tr>
+            <tr class="table-summary__row">
+              <td class="table-summary__column">Cheese Pizza x 1</td>
+              <td class="table-summary__column">THB 210</td>
+            </tr>
+            <tr class="table-summary__row">
+              <td class="table-summary__column">Fries x 1</td>
+              <td class="table-summary__column">THB 100</td>
+            </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="card">
+          <table class="table-summary">
+            <tbody>
+            <tr class="table-summary__row">
+              <td class="table-summary__column table-summary__column--no-space">
+                <strong class="table-summary__total">Price per person</strong>
+                <small class="table-summary__fee">* Exclude vat and delivery fee</small>
+              </td>
+              <td class="table-summary__column">THB 165</td>
+            </tr>
+            </tbody>
+          </table>
+        </section>
+      </aside>
     </main>
 
     <footer>
       <form class="form form--inline" method="post" :action="`/event/${eventId}/order/new`">
         <input type="hidden" name="_csrf" :value="csrfToken">
         <div class="form__group">
-          <label for="orderName" class="form__sr">Order Name</label>
-          <input id="orderName" type="text" name="name" placeholder="Name" required>
+          <label for="order_name" class="form__sr">Order Name</label>
+          <input type="text" id="order_name" value="Margarita Pizza">
         </div>
         <div class="form__group">
-          <label for="orderPrice" class="form__sr">Price</label>
-          <input id="orderPrice" type="number" name="price" placeholder="Price">
+          <label for="order_price" class="form__sr">Order Price</label>
+          <input type="number" id="order_price" placeholder="Price">
+        </div>
+        <div class="form__group">
+          <label for="order_link" class="form__sr">Order Link</label>
+          <input type="text" id="order_link" placeholder="Order Link">
         </div>
         <div class="form__group">
           <span class="amount">
@@ -52,10 +142,6 @@
               <i class="icon icon--plus"></i>
             </button>
           </span>
-        </div>
-        <div class="form__group">
-          <label for="orderLink" class="form__sr">Link</label>
-          <input id="orderLink" type="text" name="link" placeholder="Link">
         </div>
         <button type="submit" class="btn btn--primary">&plus; Add Menu</button>
       </form>
