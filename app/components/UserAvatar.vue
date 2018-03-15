@@ -1,5 +1,7 @@
 <template>
-  <img class="avatar" :src=user.imageUrl />
+  <figure class="avatar avatar--large">
+    <img class="avatar__image" :src=user.imageUrl alt="User profile picture">
+  </figure>
 </template>
 
 <script>
@@ -7,14 +9,4 @@
     props: ['user'],
   };
 </script>
-
-<!-- TODO: Remove this temporary styling -->
-<style lang="scss">
-  .avatar {
-    width: 3rem;
-    height: 3rem;
-    margin-right: 20px;
-    border-radius: 100%;
-  }
-</style>
 

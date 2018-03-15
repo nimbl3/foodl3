@@ -1,7 +1,17 @@
-// TODO: Change the default syle later
-html {
-  body {
-    background: white;
-    color: black;
+.layout-default {
+  .top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: em(90px);
+  }
+
+  main {
+    width: em(1100px);
+    max-width: 100%;
+    margin-top: em(90px + 56px);;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
