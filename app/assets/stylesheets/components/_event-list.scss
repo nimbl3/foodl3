@@ -2,12 +2,26 @@
   margin-top: em(66px);
   font-size: 1rem;
 
+  &__date {
+    display: block;
+    line-height: strip-unit(19px / 16px);
+  }
+
   &__divider {
     border-bottom: 1px solid map-get($brand-white, 'light');
   }
 
   &__header {
     padding-bottom: em(31px, 14px);
+  }
+
+  &__notice {
+    display: block;
+    margin-top: em(9px, 14px);
+    color: map-get($brand-orange, 'light');
+    font-size: em(14px);
+    font-weight: normal;
+    line-height: (17px / 14px);
   }
 
   &__order {
@@ -24,32 +38,18 @@
     }
   }
 
-  &__date {
+  &__order-name {
     display: block;
-    line-height: strip-unit(19px / 16px);
-  }
-
-  &__notice {
-    display: block;
-    margin-top: em(9px, 14px);
-    color: map-get($brand-orange, 'light');
-    font-size: em(14px);
-    font-weight: normal;
-    line-height: (17px / 14px);
-  }
-
-  &__action {
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: em(34.5px, 12px);
-    color: map-get($brand-gray, 'primary');
-    font-size: em(12px);
+    font-size: em(18px);
     font-family: map-get($font, 'medium');
-    line-height: (15px / 12px);
-    text-decoration: none;
+    line-height: (22px / 18px);
+  }
 
-    > .icon {
-      margin-right: em(11.5px, 12px);
-    }
+  &__order-price {
+    display: block;
+    margin-top: em(6px, 14px);
+    font-size: em(14px);
+    font-family: map-get($font, 'medium');
+    line-height: (17px / 14px);
   }
 }

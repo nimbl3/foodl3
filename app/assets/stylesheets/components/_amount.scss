@@ -3,15 +3,12 @@
   align-items: center;
   font-size: 1rem;
 
-  // TODO: Show the minus and plus icon when the component is fullly implemented
   &__minus {
-    display: none;
     width: em(22px);
     height: em(22px);
   }
 
   &__plus {
-    display: none;
     width: em(22px);
     height: em(22px);
     font-size: em(18px);
