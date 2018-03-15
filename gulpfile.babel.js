@@ -29,7 +29,7 @@ gulp.task('clean', function () {
   return del(['dist']);
 });
 
-gulp.task('sass', ['clean'], function () {
+gulp.task('sass', ['fonts', 'images', 'clean'], function () {
   return gulp.src(paths.scss)
     .pipe(sass({
       outputStyle: 'compressed'
