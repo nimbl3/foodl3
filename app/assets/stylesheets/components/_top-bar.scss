@@ -8,7 +8,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: em(1100px);
+    width: rem(1100px);
     height: 100%;
     margin: 0 auto;
   }
@@ -16,8 +16,8 @@
   &__brand {
     @include hide-text;
 
-    width: em(110px);
-    height: em(28.32px);
+    width: rem(110px);
+    height: rem(28.32px);
     background: url(map-get($path, 'image') + "/logo.png") no-repeat center;
     background-size: contain;
   }
@@ -31,23 +31,23 @@
     font-size: 1em;
     font-family: map-get($font, "medium");
     font-weight: normal;
-    line-height: 19px / 16px;
+    line-height: (19px / 16px);
   }
 
   &__logout {
     @include hide-text;
 
     display: block;
-    width: em(16px);
-    height: em(16px);
-    margin-left: em(19px);
+    width: 1rem;
+    height: 1rem;
+    margin-left: rem(19px);
     background: url(map-get($path, 'image') + "/icon-logout.svg") no-repeat center;
     background-size: contain;
   }
 
   .avatar {
-    padding-right: em(22px);
-    padding-left: em(22px);
+    padding-right: rem(22px);
+    padding-left: rem(22px);
     border-right: 1px solid map-get($brand-white, 'light');
   }
 }
