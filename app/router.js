@@ -46,19 +46,22 @@ module.exports.init = (app, config) => {
 
   const vueOptions = {
     rootPath: path.join(__dirname, 'components'),
-    vue: {
-      head: {
-        meta: [
-          { charset: 'UTF-8'},
-          { name: 'viewport', content: 'width=device-width, user-scalable=no, initial-scale=1' },
-          { script: vueScript },
-          { style: 'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css' },
-          { style: '/assets/rendered/style.css' }
-        ],
-        title: 'Foodl3'
-      }
+    head: {
+      metas: [
+        { charset: 'UTF-8'},
+        { name: 'viewport', content: 'width=device-width, user-scalable=no, initial-scale=1' },
+      ],
+      scripts: [
+        { src: vueScript },
+        { src: 'https://unpkg.com/axios/dist/axios.min.js' }
+      ],
+      styles: [
+        { style: 'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css' },
+        { style: '/assets/rendered/style.css' },
+      ],
+      title: 'Foodl3'
     },
-    layout: {
+    template: {
       html: {
         start: '<!DOCTYPE html><html class="layout-default">',
         end: '</html>'
@@ -147,7 +150,7 @@ module.exports.init = (app, config) => {
       }
     };
     res.statusCode = 404;
-    res.renderVue('../screens/error', data, vueOptions);
+    res.renderVue('../screens/error.vue', data, vueOptions);
   });
 
   app.use(function onError(error, req, res, next) {
@@ -158,7 +161,7 @@ module.exports.init = (app, config) => {
       error: error.stack
     };
     if (res.statusCode) {
-      res.renderVue('../screens/error', data);
+      res.renderVue('../screens/error.vue', data);
     } else {
       next();
     }

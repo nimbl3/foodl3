@@ -23,7 +23,7 @@ module.exports.default = (router) => {
         data.events.push(event);
       });
 
-      res.renderVue('../screens/events', data);
+      res.renderVue('../screens/events.vue', data);
     });
   });
 
