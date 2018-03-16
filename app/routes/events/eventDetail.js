@@ -6,25 +6,38 @@ module.exports.default = (router) => {
       csrfToken: req.csrfToken(),
       eventId: req.params.id,
       orders: [],
+      users: [],
       currentUser: req.session.user
     };
 
-    let getDetail = req.app.db.collection('events').doc(req.params.id).get();
-    let getOrders = req.app.db.collection('events').doc(req.params.id).collection('orders').get();
+    let eventId = req.params.id;
 
-    Promise.all([getDetail, getOrders]).then(values => {
+    let getDetail = req.app.db.collection('events').doc(eventId).get();
+    let getOrders = req.app.db.collection('events').doc(eventId).collection('orders').get();
+    let getUsers = req.app.db.collection('events').doc(eventId).collection('users').get();
+
+    Promise.all([getDetail, getOrders, getUsers]).then(values => {
+      // Event Detail
       data.event = Object.assign({ id: values[0].id }, values[0].data());
-      values[1].forEach(function (order) {
-        data.orders.push(Object.assign({ id: order.id }, order.data()));
+      // Event Users
+      data.users = values[2].docs.map((user) => {
+        return Object.assign({ id: user.id }, user.data());
       });
 
-      res.renderVue('../screens/eventDetail.vue', data, {
-        template: {
-          html: {
-            start: '<!DOCTYPE html><html class="layout-two-column">',
-            end: '</html>'
-          },
-        }
+      // Event Orders
+      let orderPromises = [];
+      values[1].forEach((order) => {
+        data.orders.push(Object.assign({ id: order.id }, order.data()));
+        orderPromises.push(getOrderUsers(order));
+      });
+
+      Promise.all(orderPromises).then(values => {
+        values.forEach((orderUsers, index) => {
+          data.orders[index]['users'] =  orderUsers.docs.map(user => {
+            return Object.assign({ id: user.id }, user.data());
+          });
+        });
+        renderEventDetailPage(res, data);
       });
     });
   });
@@ -36,6 +49,8 @@ module.exports.default = (router) => {
         name: req.body.name,
         price: Number(req.body.price),
         link: req.body.link,
+        // TODO: Implement order amount
+        amount: 1
       }
     )
       .then((orderRef) => {
@@ -61,8 +76,23 @@ function joinOrder(currentUser, eventRef, orderRef) {
     imageUrl: currentUser.imageUrl
   };
 
-  let addUserToOrder = eventRef.collection('users').add(user);
-  let addUserToEvent = orderRef.collection('users').add(user);
+  let addUserToOrder = eventRef.collection('users').doc(currentUser.id).set(user);
+  let addUserToEvent = orderRef.collection('users').doc(currentUser.id).set(user);
 
   return Promise.all([addUserToOrder, addUserToEvent]);
+}
+
+function getOrderUsers(order) {
+  return order.ref.collection('users').get();
+}
+
+function renderEventDetailPage(res, data) {
+  res.renderVue('../screens/eventDetail.vue', data, {
+    template: {
+      html: {
+        start: '<!DOCTYPE html><html class="layout-two-column">',
+        end: '</html>'
+      },
+    }
+  });
 }

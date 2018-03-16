@@ -27,7 +27,8 @@
           </span>
         </td>
         <td>
-          <a :href="order.link">{{ order.link }}</a>
+          <a :href="order.link" v-if="order.link">{{ order.link }}</a>
+          <span v-else>-</span>
         </td>
         <td>
           <user-list :users="order.users"></user-list>
