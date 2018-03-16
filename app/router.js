@@ -52,8 +52,7 @@ module.exports.init = (app, config) => {
         { name: 'viewport', content: 'width=device-width, user-scalable=no, initial-scale=1' },
       ],
       scripts: [
-        { src: vueScript },
-        { src: 'https://unpkg.com/axios/dist/axios.min.js' }
+        { src: vueScript }
       ],
       styles: [
         { style: 'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css' },
