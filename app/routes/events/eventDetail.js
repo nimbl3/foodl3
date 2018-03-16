@@ -34,7 +34,7 @@ module.exports.default = (router) => {
     eventRef.collection('orders').add(
       {
         name: req.body.name,
-        price: req.body.price,
+        price: Number(req.body.price),
         link: req.body.link,
       }
     )

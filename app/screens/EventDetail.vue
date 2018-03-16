@@ -57,48 +57,7 @@
       </section>
       <aside>
         <section class="card">
-          <table class="table-summary">
-            <caption class="table-summary__title">Order Summary</caption>
-            <tfoot class="table-summary__footer">
-            <tr>
-              <td class="table-summary__column">
-                <strong class="table-summary__total">Total</strong>
-                <small class="table-summary__fee">* Exclude vat and delivery fee</small>
-              </td>
-              <td class="table-summary__column">THB 990</td>
-            </tr>
-            </tfoot>
-            <tbody>
-            <tr class="table-summary__row">
-              <td class="table-summary__column">Pepporoni x 1</td>
-              <td class="table-summary__column">THB 210</td>
-            </tr>
-            <tr class="table-summary__row">
-              <td class="table-summary__column">Garlic Bread x 1</td>
-              <td class="table-summary__column">THB 100</td>
-            </tr>
-            <tr class="table-summary__row">
-              <td class="table-summary__column">Hawaiian x 1</td>
-              <td class="table-summary__column">THB 210</td>
-            </tr>
-            <tr class="table-summary__row">
-              <td class="table-summary__column">Chicken Wings x 1</td>
-              <td class="table-summary__column">THB 100</td>
-            </tr>
-            <tr class="table-summary__row">
-              <td class="table-summary__column">CocaCola x 1</td>
-              <td class="table-summary__column">THB 60</td>
-            </tr>
-            <tr class="table-summary__row">
-              <td class="table-summary__column">Cheese Pizza x 1</td>
-              <td class="table-summary__column">THB 210</td>
-            </tr>
-            <tr class="table-summary__row">
-              <td class="table-summary__column">Fries x 1</td>
-              <td class="table-summary__column">THB 100</td>
-            </tr>
-            </tbody>
-          </table>
+          <table-summary :orders="orders"></table-summary>
         </section>
 
         <section class="card">
@@ -159,6 +118,7 @@
   import eventMenuPopupList from '../components/EventMenuPopupList.vue';
   import modal from '../components/Modal.vue';
   import orderList from '../components/OrderList.vue';
+  import tableSummary from '../components/TableSummary.vue';
 
   export default {
     data: function () {
@@ -171,7 +131,8 @@
       eventMenuPopupHeader,
       eventMenuPopupList,
       modal,
-      orderList
+      orderList,
+      tableSummary
     }
   };
 </script>
