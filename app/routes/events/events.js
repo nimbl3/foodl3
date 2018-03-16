@@ -16,14 +16,21 @@ module.exports.default = (router) => {
       currentUser: req.session.user
     };
 
-    req.app.db.collection('events').get().then((querySnapshot) => {
-      querySnapshot.forEach((doc) => {
-        let event = doc.data();
-        event['id'] = doc.id;
-        data.events.push(event);
+    req.app.db.collection('events').get().then((events) => {
+      let eventUsersPromises = [];
+      events.forEach((event) => {
+        data.events.push(Object.assign({ id: event.id }, event.data()));
+        eventUsersPromises.push(event.ref.collection('users').get());
       });
 
-      res.renderVue('../screens/events.vue', data);
+      Promise.all(eventUsersPromises).then((values) => {
+        values.forEach((eventUsers, index) => {
+          data.events[index]['users'] = eventUsers.docs.map((user) => {
+            return Object.assign({ id: user.id }, user.data());
+          });
+        });
+        res.renderVue('../screens/events.vue', data);
+      });
     });
   });
 
