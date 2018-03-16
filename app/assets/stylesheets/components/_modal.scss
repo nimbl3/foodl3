@@ -42,12 +42,12 @@
 }
 
 .modal-header + .modal-body {
-  height: rem(420px);
-  margin-right: rem(-30px);
-  margin-bottom: rem(-20px);
-  margin-left: rem(-30px);
-  border-top: 1px solid map-get($brand-white, 'light');
-  overflow-y: scroll;
+  //height: rem(420px);
+  ////margin-right: rem(-30px);
+  ////margin-bottom: rem(-20px);
+  ////margin-left: rem(-30px);
+  //border-top: 1px solid map-get($brand-white, 'light');
+  //overflow-y: scroll;
 }
 
 .modal-default-button {
