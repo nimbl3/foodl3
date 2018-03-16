@@ -146,19 +146,28 @@
         <button type="submit" class="btn btn--primary">&plus; Add Menu</button>
       </form>
     </footer>
+    <modal v-if="showAddModal" @close="showAddModal = false">
+      <event-menu-popup-header slot="header" title="asdfasdf" linkUrl="https://www.google.co.th"></event-menu-popup-header>
+    </modal>
   </div>
 </template>
 
 <script>
   import appHeader from './layouts/AppHeader.vue';
+  import eventMenuPopupHeader from './EventMenuPopupHeader.vue';
+  import modal from './Modal.vue';
   import orderList from './OrderList.vue';
 
   export default {
     data: function () {
-      return {};
+      return {
+        showAddModal: true
+      };
     },
     components: {
       appHeader,
+      eventMenuPopupHeader,
+      modal,
       orderList
     }
   };

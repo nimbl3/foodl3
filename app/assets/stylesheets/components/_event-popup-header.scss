@@ -1,0 +1,15 @@
+.event-popup-header {
+  margin-top: rem(-11px);
+  font-size: 1rem;
+  text-align: center;
+
+  &__title {
+    font-size: em(18px);
+    line-height: (22px / 18px);
+  }
+
+  &__link {
+    font-size: em(12px);
+    line-height: (28px / 12px);
+  }
+}
