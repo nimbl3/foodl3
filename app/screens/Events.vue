@@ -18,10 +18,10 @@
 </template>
 
 <script>
-  import appHeader from './layouts/AppHeader.vue';
-  import eventList from './EventList.vue';
-  import eventForm from './EventForm.vue';
-  import modal from './Modal.vue';
+  import appHeader from '../components/layouts/AppHeader.vue';
+  import eventList from '../components/EventList.vue';
+  import eventForm from '../components/EventForm.vue';
+  import modal from '../components/Modal.vue';
 
   export default {
     data: function () {

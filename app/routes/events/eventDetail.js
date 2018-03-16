@@ -18,8 +18,8 @@ module.exports.default = (router) => {
         data.orders.push(Object.assign({ id: order.id }, order.data()));
       });
 
-      res.renderVue('../screens/eventDetail', data, {
-        layout: {
+      res.renderVue('../screens/eventDetail.vue', data, {
+        template: {
           html: {
             start: '<!DOCTYPE html><html class="layout-two-column">',
             end: '</html>'

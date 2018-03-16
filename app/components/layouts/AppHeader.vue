@@ -18,7 +18,7 @@
 </template>
 
 <script>
-  import userAvatar from './UserAvatar.vue';
+  import userAvatar from '../UserAvatar.vue';
 
   export default {
     data: function () {

@@ -154,11 +154,11 @@
 </template>
 
 <script>
-  import appHeader from './layouts/AppHeader.vue';
-  import eventMenuPopupHeader from './EventMenuPopupHeader.vue';
-  import eventMenuPopupList from './EventMenuPopupList.vue';
-  import modal from './Modal.vue';
-  import orderList from './OrderList.vue';
+  import appHeader from '../components/layouts/AppHeader.vue';
+  import eventMenuPopupHeader from '../components/EventMenuPopupHeader.vue';
+  import eventMenuPopupList from '../components/EventMenuPopupList.vue';
+  import modal from '../components/Modal.vue';
+  import orderList from '../components/OrderList.vue';
 
   export default {
     data: function () {
