@@ -122,15 +122,15 @@
         <input type="hidden" name="_csrf" :value="csrfToken">
         <div class="form__group">
           <label for="order_name" class="form__sr">Order Name</label>
-          <input type="text" id="order_name" value="Margarita Pizza">
+          <input type="text" id="order_name" name="name" placeholder="Margarita Pizza">
         </div>
         <div class="form__group">
           <label for="order_price" class="form__sr">Order Price</label>
-          <input type="number" id="order_price" placeholder="Price">
+          <input type="number" id="order_price" name="price" placeholder="Price">
         </div>
         <div class="form__group">
           <label for="order_link" class="form__sr">Order Link</label>
-          <input type="text" id="order_link" placeholder="Order Link">
+          <input type="text" id="order_link"  name="link" placeholder="Order Link">
         </div>
         <div class="form__group">
           <span class="amount">
