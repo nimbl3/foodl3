@@ -147,7 +147,8 @@
       </form>
     </footer>
     <modal v-if="showAddModal" @close="showAddModal = false">
-      <event-menu-popup-header slot="header" title="asdfasdf" linkUrl="https://www.google.co.th"></event-menu-popup-header>
+      <event-menu-popup-header slot="header"></event-menu-popup-header>
+      <event-menu-popup-list slot="body"></event-menu-popup-list>
     </modal>
   </div>
 </template>
@@ -155,18 +156,20 @@
 <script>
   import appHeader from './layouts/AppHeader.vue';
   import eventMenuPopupHeader from './EventMenuPopupHeader.vue';
+  import eventMenuPopupList from './EventMenuPopupList.vue';
   import modal from './Modal.vue';
   import orderList from './OrderList.vue';
 
   export default {
     data: function () {
       return {
-        showAddModal: true
+        showAddModal: false
       };
     },
     components: {
       appHeader,
       eventMenuPopupHeader,
+      eventMenuPopupList,
       modal,
       orderList
     }

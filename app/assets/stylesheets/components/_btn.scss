@@ -16,4 +16,15 @@
   &--large {
     padding: rem(18px 30px);
   }
+
+  &--close {
+    @include hide-text;
+
+    width: rem(26px);
+    height: rem(26px);
+    border-radius: 50%;
+    padding: 0;
+    background: map-get($brand-white, 'light') url("/assets/images/icon-close.svg") no-repeat center;
+    background-size: rem(6px) rem(6px);
+  }
 }
