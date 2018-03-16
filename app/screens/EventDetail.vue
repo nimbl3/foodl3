@@ -5,33 +5,7 @@
       <section class="event">
         <header class="event__header">
           <h1 class="event__header-title">{{ event.name }}</h1>
-          <ul class="user-list">
-            <li class="user-list__item">
-              <figure class="avatar">
-                <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
-              </figure>
-            </li>
-            <li class="user-list__item">
-              <figure class="avatar">
-                <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
-              </figure>
-            </li>
-            <li class="user-list__item">
-              <figure class="avatar">
-                <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
-              </figure>
-            </li>
-            <li class="user-list__item">
-              <figure class="avatar">
-                <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
-              </figure>
-            </li>
-            <li class="user-list__item">
-              <figure class="avatar">
-                <img class="avatar__image" src="/assets/images/icon-profile-yellow.svg" alt="User profile picture">
-              </figure>
-            </li>
-          </ul>
+          <user-list :users="users"></user-list>
         </header>
         <section class="event__body">
           <p>{{ event.description }}</p>
@@ -118,6 +92,7 @@
   import eventMenuPopupList from '../components/EventMenuPopupList.vue';
   import modal from '../components/Modal.vue';
   import orderList from '../components/OrderList.vue';
+  import userList from '../components/UserList.vue';
   import tableSummary from '../components/TableSummary.vue';
 
   export default {
@@ -132,6 +107,7 @@
       eventMenuPopupList,
       modal,
       orderList,
+      userList,
       tableSummary
     }
   };

@@ -49,9 +49,6 @@
     components: {
       userList,
       eventForm
-    },
-    created() {
-      console.log(this.events);
     }
   };
 </script>
